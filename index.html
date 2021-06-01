@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="" content="...">
+		 <link href="style.css" rel="stylesheet" >
+		 <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
+		<script src="script.js" defer></script>
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="hamburger-menu">
+			<span id="closing">X</span>
+			<div>O mnie</div>
+			<div id="moje-strony">Moje strony &#9660;
+				<a href="https://magicianpl.github.io/SpaceCoff" target="_blank">SpaceCoff</a>
+				<a href="https://magicianpl.github.io/Wyczesani" target="_blank">Wyczesani</a>
+				<a href="https://magicianpl.github.io/Inwestor" target="_blank">Inwestor</a>
+			</div>
+			<div id="vanilla-js">Vanilla JS &#9660;
+				<a href="#">Color-Flipper</a>
+				<a href="#">Kostka</a>
+			</div>
+		</div>
+		<nav>
+			<img id="icon-hamburger" src="hamburger-icon.png">
+			<ul>
+				<li class="li-main">O mnie</li>
+				<li class="li-main">Moje Strony &#9660;
+					<ol>
+						<li><a href="https://magicianpl.github.io/SpaceCoff" target="_blank">SpaceCoff</a></li>
+						<li><a href="https://magicianpl.github.io/Wyczesani" target="_blank">Wyczesani</a></li>
+						<li><a href="https://magicianpl.github.io/Inwestor" target="_blank">Inwestor</a></li>
+					</ol>
+				</li>
+				<li class="li-main">Vanilla JS &#9660;
+					<ol id="sub-two">
+						<li><a href="https://magicianpl.github.io/Color-Flipper" target="_blank">Color Flipper</a></li>
+						<li><a href="https://magicianpl.github.io/Kostka" target="_blank">Kostka</a></li>
+					</ol>
+				</li>
+			</ul>
+		</nav>
+		<header>
+			<div id="wrapper"><span class="appearing">Michał Sukowski</span>
+				<p><span class="color">&lt;</span> <span class="front">Front-</span><span class="end">End</span> <span class="color">&gt;</span></p>
+				<p><span class="developing">Developing</span></p>
+			</div>
+		</header>
+		<main>
+			<img src="michal.png">
+			<div id="container-overflow"> <!-- Po to, żeby wypozycjonować białe linie w o-mnie negatywnym topem i zakryć obramowanie. A container ma overflow na hidden, żeby nie było widac tła.  -->
+			<div id="o-mnie">
+			<span class="white-line"></span>
+			<span class="white-line"></span>
+			<p>Cześć, jestem Michał i jestem raczkującym front-endowcem.<br>Lubię kodować, kombinować i czasem przy tym nawet się wkurzać, ale kiedy wciskam ostatnie <strong>ctrl + s</strong> i strona jest ukończona, to mam ochotę od razu brać się za coś kolejnego!</p>
+			<p>Na chwilę obecną mój stack, to oczywiście <strong><i>HTML i CSS</i></strong>, ale powoli wdrażam się w <strong><i>JavaScript</i></strong>.<br>
+			Poznaję także GITa.</p>
+			<p>Dalej, chciałbym zająć się Bootsrapem, Reactem, WordPressem. Póki co jednak, wszystko co zrobiłem do tej pory, to głównie HTML i CSS gołym kodem.</p>
+			<p>Sprawdź, zobacz, oceń - będzie mi bardzo miło :)</p>
+			</div>
+			</div>
+			<div id="sub-main">
+				<p>Mój Stack</p>
+				<div id="vertical-divider"></div>
+				<div id="logo">
+					<img src="htmlnew.png" alt="logo html">
+					<img src="cssnew.png" alt="logo css">
+					<img src="jsnew.png" alt="logo javascript">
+				</div>
+				<div id="animations">
+					<p>Żeby wszystko umieścić</p>
+					<p>Żeby było pięknie</p>
+					<p>Żeby było interaktywnie</p>
+				</div>
+				<div>
+					<p>Zanim zacznę dalszą naukę, chciałbym móc potrafić zrobić wiele bez frameworków. Cały czas wgłębiam się w JS'a. W najbliższym czasie chcę poznać także WordPressa i Elementora.</p>
+					<p>W międzyczasie Bootstrapa i w dalszych planach także Reacta.<br>
+					Miło byłoby też oswoić LESSa albo SASSa.</p>
+				</div>
+			</div>
+			<h2>Oceń moje strony:</h2>
+			<div id="tiles">
+				<div>
+					<div><a href="https://magicianpl.github.io/SpaceCoff/" target="_blank">SpaceCoff</a></div>
+				</div>
+				<div>
+					<div>Wyczesani</div>
+				</div>
+				<div>
+					<div>Inwestor</div>
+				</div>
+			</div>
+			<h2>JS w roli głównej:</h2>
+			<div id="tiles-js">
+				<div>
+					<div>Color-Flipper</div>
+				</div>
+				<div>
+					<div>Kostka</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			Moje sociale: <a href="https://github.com/MagicianPL><img src="github.png"></a> <a href="https://www.facebook.com/sukowskimichal"><img src="fb.png"></a>
+		</footer>
+	</body>
