@@ -656,21 +656,21 @@ footer {
 	z-index: 2;
 }
 
-footer > img {
+footer > a > img {
 	height: 4rem;
 	width: 4rem;
 	position: absolute;
 }
 
-footer > img:nth-child(1) {
+footer > a > img:nth-child(1) {
 	left: 24rem;
 }
 
-footer > img:nth-child(2) {
+footer > a > img:nth-child(2) {
 	left: 30rem;
 }
 
-footer > img:hover {
+footer > a > img:hover {
 	cursor: pointer;
 	width: 4.5rem;
 	height: 4.5rem;
