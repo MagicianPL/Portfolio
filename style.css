@@ -659,15 +659,16 @@ footer {
 footer > a > img {
 	height: 4rem;
 	width: 4rem;
-	position: absolute;
+	/*position: absolute;*/
+        display: flex;
 }
 
 footer > a > img:nth-child(1) {
-	left: 24rem;
+	/*left: 24rem;*/
 }
 
 footer > a > img:nth-child(2) {
-	left: 30rem;
+	/*left: 30rem;*/
 }
 
 footer > a > img:hover {
