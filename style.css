@@ -5,6 +5,7 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -656,27 +657,45 @@ footer {
 	z-index: 2;
 }
 
-footer > a > img {
-	height: 4rem;
+footer > a {
 	width: 4rem;
-	/*position: absolute;*/
-        display: flex;
+	height: 4rem;
+	margin-left: 3rem;
 }
 
-footer > a > img:nth-child(1) {
-	/*left: 24rem;*/
-}
-
-footer > a > img:nth-child(2) {
-	/*left: 30rem;*/
-}
-
-footer > a > img:hover {
+footer > a:hover {
 	cursor: pointer;
 	width: 4.5rem;
 	height: 4.5rem;
 	transition-duration: 0.5s;
+	opacity: 0.7;
 }
+
+footer > a > img {
+	width: 100%;
+	height: 100%;
+}
+
+/*footer img {
+	height: 4rem;
+	width: 4rem;
+	position: absolute;
+}
+
+footer img:nth-child(1) {
+	left: 24rem;
+}
+
+footer img:nth-child(2) {
+	left: 30rem;
+}
+
+footer img:hover {
+	cursor: pointer;
+	width: 4.5rem;
+	height: 4.5rem;
+	transition-duration: 0.5s;
+}*/
 
 a, a:hover, a:visited, a:active {
   color: inherit;
@@ -705,7 +724,7 @@ a, a:hover, a:visited, a:active {
 	 #hamburger-menu {
 		 width: 100%;
 		 min-height: 100vh;
-		 display: none;
+		 display: flex;
 		 flex-direction: column;
 		 justify-content: center;
 		 align-items: center;
@@ -713,6 +732,7 @@ a, a:hover, a:visited, a:active {
 		 opacity: 0;
 		 position: fixed;
 		 z-index: 10000;
+		 display: none;
 		 animation: appearing-hamb;
 		 animation-duration: 1s;
 		 animation-fill-mode: forwards;
@@ -765,6 +785,10 @@ a, a:hover, a:visited, a:active {
 		display: flex;
 		margin-top: 2rem;
 		display: none;
+	 }
+	 
+	 #hamburger-menu > div:nth-child(2) > a {
+		 display: flex;
 	 }
 	 
 	 
@@ -987,6 +1011,10 @@ a, a:hover, a:visited, a:active {
 		display: flex;
 		margin-top: 2rem;
 		display: none;
+	 }
+	 
+	  #hamburger-menu > div:nth-child(2) > a {
+		 display: flex;
 	 }
 	 
 	 
