@@ -712,7 +712,6 @@ a, a:hover, a:visited, a:active {
 		 opacity: 0;
 		 position: fixed;
 		 z-index: 10000;
-		 display: none;
 		 animation: appearing-hamb;
 		 animation-duration: 1s;
 		 animation-fill-mode: forwards;
