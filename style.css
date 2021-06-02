@@ -704,7 +704,7 @@ a, a:hover, a:visited, a:active {
 	 #hamburger-menu {
 		 width: 100%;
 		 min-height: 100vh;
-		 display: flex;
+		 display: none;
 		 flex-direction: column;
 		 justify-content: center;
 		 align-items: center;
