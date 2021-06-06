@@ -451,6 +451,26 @@ main > img {
 	flex-direction: column;
 	-webkit-box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.68); 
 	box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.68);
+	visibility: hidden;
+}
+
+.appearing-from-bottom {
+	animation: appearing-from-bottom;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearing-from-bottom {
+	0% {
+		transform: translateY(200px);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: none;
+		opacity 1;
+		visibility: visible;
+	}
 }
 
 #sub-main > div:last-child > p {
@@ -490,6 +510,7 @@ h2 {
 	margin: 0 auto;
 	margin-bottom: 7rem;
 	justify-content: space-between;
+	visibility: hidden;
 }
 
 #tiles > div {
@@ -588,6 +609,41 @@ h2 {
 	align-items: center;
 	cursor: pointer;
 	border: 2px solid #4d0045;
+	visibility: hidden;
+}
+
+@keyframes LeftToRight {
+	0% {
+		transform: translateX(-100px);
+	}
+	
+	100% {
+		transform: none;
+		visibility: visible;
+	}
+}
+
+.LeftToRight {
+	animation: LeftToRight;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes RightToLeft {
+	0% {
+		transform: translateX(+100px);
+	}
+	
+	100% {
+		transform: none;
+		visibility: visible;
+	}
+}
+
+.RightToLeft {
+	animation: RightToLeft;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 
 #tiles-js > div:nth-child(1)::before {
