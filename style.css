@@ -802,11 +802,16 @@ a, a:hover, a:visited, a:active {
 	 
 	 #closing {
 		 font-size: 5rem;
+		 width: 6rem;
+		 height: 6rem;
+		 text-align: center;
+		 line-height: 6rem;
 		 color: white;
 		 border: 1px solid red;
 		 position: absolute;
 		 top: 3rem;
 		 right: 3rem;
+		 border-radius: 50%;
 	 }
 	 
 	 #closing:hover {
@@ -831,6 +836,11 @@ a, a:hover, a:visited, a:active {
 	 
 	 #hamburger-menu > div:nth-child(3) { /*Moje strony*/
 		flex-direction: column;
+	 }
+	 
+	 #hamburger-menu > div:nth-child(3) > a:nth-child(3) { /*inwestor*/
+		 padding-bottom: 5rem;
+		 box-sizing: border-box;
 	 }
 	 
 	 #hamburger-menu > div:nth-child(4) { /*Vanilla JS*/
@@ -1029,6 +1039,11 @@ a, a:hover, a:visited, a:active {
 	 
 	 #closing {
 		 font-size: 5rem;
+		 width: 6rem;
+		 height: 6rem;
+		 text-align: center;
+		 line-height: 6rem;
+		 border-radius: 50%;
 		 color: white;
 		 border: 1px solid red;
 		 position: absolute;
@@ -1057,6 +1072,11 @@ a, a:hover, a:visited, a:active {
 	 
 	 #hamburger-menu > div:nth-child(3) { /*Moje strony*/
 		flex-direction: column;
+	 }
+	 
+	  #hamburger-menu > div:nth-child(3) > a:nth-child(3) { /*inwestor*/
+		 padding-bottom: 5rem;
+		 box-sizing: border-box;
 	 }
 	 
 	 #hamburger-menu > div:nth-child(4) { /*Vanilla JS*/
