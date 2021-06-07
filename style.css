@@ -449,8 +449,8 @@ body::after {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	-webkit-box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.68); 
-	box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.68);
+	-webkit-box-shadow: inset 0px 0px 12px -3px #80080; 
+	box-shadow: inset 0px 0px 12px -3px #800080;
 	visibility: hidden;
 }
 
@@ -499,7 +499,7 @@ body::after {
 h2 {
 	font-size: 4.2rem;
 	color: #4d0045;
-	padding-left: 5rem;
+	text-align: center;
 	margin-bottom: 8rem;
 }
 
