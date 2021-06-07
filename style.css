@@ -31,7 +31,7 @@ nav > img {
 
 nav {
 	width: 100%;
-	height: 45px;
+	height: 60px;
 	color: white;
 	background-color: #4d0045;
 	display: flex;
@@ -134,7 +134,7 @@ header {
 	width: 100%;
 	height: 40rem;
 	position: relative;
-	top: 45px;
+	top: 60px;
 	color: black;
 	font-size: 7rem;
 	box-sizing: border-box;
@@ -162,16 +162,10 @@ header::after {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-color: white;
+	background-color: #800080;
 	opacity: 0.3;
 	z-index: -2;
-}
-
-#overlay-white {
-	width: 100%;
-	height: 100%;
-	background-color: white;
-	opacity: 0.3;
+	clip-path: polygon(0 0, 86% 0, 58% 100%, 0% 100%);
 }
 
 #wrapper {
@@ -180,18 +174,16 @@ header::after {
 	height: 100%;
 	padding-top: 3rem;
 	box-sizing: border-box;
-	text-align: center;
-}
-
-#wrapper > p:nth-child(1) {
-	margin-left: 20rem;
-	font-size: 9rem;
-	margin: 10px 0 0 0;
+	text-align: right;
 }
 
 #wrapper > p:nth-child(2) {
-	margin-left: 30rem;
-	font-size: 9rem;
+	font-size: 8.2rem;
+	margin: 10px 0 0 0;
+}
+
+#wrapper > p:nth-child(3) {
+	font-size: 8.2rem;
 }
 
 .color {
@@ -251,8 +243,15 @@ header::after {
 	}
 }
 
+#container-max-width {
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+}
+
 main {
 	position: relative;
+	top: 15px;
 	min-height: 100vh;
 	padding-top: 26rem;
 	padding-bottom: 20rem;
@@ -293,11 +292,11 @@ body::after {
 
 #o-mnie {
 	text-align: left;
-	font-size: 2.8rem;
+	font-size: 2rem;
 	width: 82rem;
 	border: 2px solid gold;
 	margin: 0 auto;
-	padding: 16rem 9rem 3rem 9rem;
+	padding: 10rem 7rem 3rem 7rem;
 	position: relative;
 }
 
@@ -323,7 +322,7 @@ body::after {
 	}
 	
 	100% {
-		opacity: 0.2;
+		opacity: 0.15;
 	}
 }
 
@@ -332,7 +331,7 @@ body::after {
 }
 
 main > img {
-	width: 24rem;
+	width: 19rem;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -353,7 +352,7 @@ main > img {
 	border-top: 3px solid white;
 	position: absolute;
 	top: -2px;
-	left: 23rem;
+	left: 23.9rem;
 	z-index: 5;
 }
 
@@ -364,7 +363,7 @@ main > img {
 	position: absolute;
 	top: -2px;
 	z-index: 5;
-	left: 62rem;
+	left: 57.2rem;
 }
 
 #sub-main {
@@ -420,24 +419,24 @@ main > img {
 #animations > p:nth-child(1) {
 	opacity: 0;
 	animation: sentences;
-	animation-delay: 4s;
-	animation-duration: 6s;
+	animation-delay: 2s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 }
 
 #animations > p:nth-child(2) {
 	opacity: 0;
 	animation: sentences;
-	animation-delay: 4.75s;
-	animation-duration: 6s;
+	animation-delay: 2.75s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 }
 
 #animations > p:nth-child(3) {
 	opacity: 0;
 	animation: sentences;
-	animation-delay: 5.5s;
-	animation-duration: 6s;
+	animation-delay: 3.5s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 }
 
@@ -513,7 +512,7 @@ h2 {
 	visibility: hidden;
 }
 
-#tiles > div {
+#tiles > a > div {
 	width: 30rem;
 	height: 30rem;
 	position: relative;
@@ -521,14 +520,15 @@ h2 {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	/*border: 2px solid #4d0045;*/
+}
+
+#tiles > a > div:hover {
 	border: 2px solid #4d0045;
+	box-sizing: border-box;
 }
 
-#tiles > div:hover {
-	border: 2px solid red;
-}
-
-#tiles > div:nth-child(1)::before {
+#tiles > a:nth-child(1) > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -540,12 +540,12 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > div:nth-child(1):hover::before {
+#tiles > a:nth-child(1) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
-#tiles > div:nth-child(2)::before {
+#tiles > a:nth-child(2) > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -557,12 +557,12 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > div:nth-child(2):hover::before {
+#tiles > a:nth-child(2) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
-#tiles > div:nth-child(3)::before {
+#tiles > a:nth-child(3) > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -574,12 +574,12 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > div:nth-child(3):hover::before {
+#tiles > a:nth-child(3) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
-#tiles > div > div {
+#tiles > a > div > div {
 	width: 100%;
 	height: 8rem;
 	background-color: grey;
@@ -600,7 +600,7 @@ h2 {
 	justify-content: space-around;
 }
 
-#tiles-js > div {
+#tiles-js > a > div {
 	width: 30rem;
 	height: 30rem;
 	position: relative;
@@ -608,7 +608,6 @@ h2 {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	border: 2px solid #4d0045;
 	visibility: hidden;
 }
 
@@ -646,7 +645,7 @@ h2 {
 	animation-fill-mode: forwards;
 }
 
-#tiles-js > div:nth-child(1)::before {
+#tiles-js > a:nth-child(1) > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -658,12 +657,12 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles-js > div:nth-child(1):hover::before {
+#tiles-js > a:nth-child(1) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
-#tiles-js > div:nth-child(2)::before {
+#tiles-js > a:nth-child(2) > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -675,12 +674,12 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles-js > div:nth-child(2):hover::before {
+#tiles-js > a:nth-child(2) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 }
 
-#tiles-js > div > div {
+#tiles-js > a > div > div {
 	width: 100%;
 	height: 8rem;
 	background-color: grey;
@@ -692,20 +691,19 @@ h2 {
 	opacity: 0.8;
 }
 
-#tiles-js > div:hover {
-	border: 2px solid red;
+#tiles-js > a > div:hover {
+	border: 2px solid #4d0045;
+	box-sizing: border-box;
 }
 
 footer {
 	width: 100%;
-	height: 6rem;
-	position: absolute;
-	bottom: 0;
+	height: 7.5rem;
 	background-color: black;
 	z-index: -10001;
 	color: white;
-	font-size: 2.2rem;
-	line-height: 6rem;
+	font-size: 3.3rem;
+	line-height: 7.5rem;
 	padding-left: 10rem;
 	box-sizing: border-box;
 	display: flex;
@@ -714,15 +712,15 @@ footer {
 }
 
 footer > a {
-	width: 4rem;
-	height: 4rem;
+	width: 5rem;
+	height: 5rem;
 	margin-left: 3rem;
 }
 
 footer > a:hover {
 	cursor: pointer;
-	width: 4.5rem;
-	height: 4.5rem;
+	width: 5.5rem;
+	height: 5.5rem;
 	transition-duration: 0.5s;
 	opacity: 0.7;
 }
@@ -860,10 +858,8 @@ a, a:hover, a:visited, a:active {
 	 
 	 
 	 nav {
-		 height: 45px;
 		 justify-content: center;
 		 align-items: center;
-		 
 	 }
 	 
 	 nav > ul {
@@ -878,17 +874,21 @@ a, a:hover, a:visited, a:active {
 		 font-size: 8rem;
 	 }
 	 
+	 #wrapper {
+		 text-align: center;
+	 }
+	 
+	 #wrapper > p {
+		 text-align: center;
+		 font-size: 6rem;
+	 }
+	 
 	 #wrapper > p:nth-child(2) {
 		 margin-left: 0;
-		 font-size: 7rem;
 	 }
 	 
 	 #wrapper > p:nth-child(3) {
 		 margin-top: 2rem;
-	 }
-	 
-	 main {
-		
 	 }
 	 
 	 #o-mnie {
@@ -931,6 +931,8 @@ a, a:hover, a:visited, a:active {
 	 
 	 #sub-main > div:last-child {
 		 font-size: 3.4rem;
+		 width: 95%;
+		 padding: 3rem;
 	 }
 	 
 	 #logo {
@@ -951,11 +953,6 @@ a, a:hover, a:visited, a:active {
 		 display: none;
 	 }
 	 
-	 #sub-main > div:last-child {
-		 width: 95%;
-		 padding: 2rem;
-	 }
-	 
 	 h2 {
 		 padding: 0;
 		 text-align: center;
@@ -967,13 +964,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles > div {
+	 #tiles > a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles > div > div {
+	 #tiles > a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -985,13 +982,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles-js > div {
+	 #tiles-js > a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js > div > div {
+	  #tiles-js > a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -1096,7 +1093,7 @@ a, a:hover, a:visited, a:active {
 	 
 	 
 	 nav {
-		 height: 45px;
+		 height: 60px;
 		 justify-content: center;
 		 align-items: center;
 		 
@@ -1114,9 +1111,13 @@ a, a:hover, a:visited, a:active {
 		 font-size: 8rem;
 	 }
 	 
-	 #wrapper > p:nth-child(2) {
-		 margin-left: 0;
-		 font-size: 7rem;
+	 #wrapper {
+		 text-align: center;
+	 }
+	 
+	 #wrapper > p {
+		 font-size: 6rem !important;
+		 text-align: center;
 	 }
 	 
 	 #wrapper > p:nth-child(3) {
@@ -1132,6 +1133,11 @@ a, a:hover, a:visited, a:active {
 		 padding-left: 2rem;
 		 padding-right: 2rem;
 		 text-align: center;
+		 font-size: 2.2rem;
+	 }
+	 
+	 #o-mnie > p {
+		 margin-bottom: 3rem;
 	 }
 	 
 	 @keyframes toptobottom {
@@ -1167,7 +1173,12 @@ a, a:hover, a:visited, a:active {
 	 }
 	 
 	 #sub-main > div:last-child {
-		 font-size: 3.4rem;
+		 font-size: 3rem;
+		 width: 95%;
+		 padding: 3rem;
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
 	 }
 	 
 	 #logo {
@@ -1188,11 +1199,6 @@ a, a:hover, a:visited, a:active {
 		 display: none;
 	 }
 	 
-	 #sub-main > div:last-child {
-		 width: 95%;
-		 padding: 2rem;
-	 }
-	 
 	 h2 {
 		 padding: 0;
 		 text-align: center;
@@ -1204,13 +1210,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles > div {
+	 #tiles > a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles > div > div {
+	 #tiles > a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -1222,13 +1228,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles-js > div {
+	 #tiles-js > a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js > div > div {
+	  #tiles-js > a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -1255,10 +1261,6 @@ a, a:hover, a:visited, a:active {
 	 
 	 #wrapper > p:nth-child(3) {
 		 margin-top: 2rem;
-	 }
-	 
-	 main {
-		
 	 }
 	 
 	 #o-mnie {
