@@ -48,7 +48,8 @@ x.addEventListener("click", function(){
 	
 	
 const divyAll = document.getElementsByTagName("div");
-const opis = divyAll.item(11);
+const footer = document.querySelector("footer");
+const opis = divyAll.item(12);
 
 window.addEventListener("scroll", function() {
 	const dataOpis = opis.getBoundingClientRect();
@@ -58,11 +59,11 @@ window.addEventListener("scroll", function() {
 		opis.classList.add("appearing-from-bottom");
 	}
 	
-	const divLeft = divyAll.item(13);
-	const divRight = divyAll.item(17);
-	const divCenter = divyAll.item(15);
-	const divLeftJs = divyAll.item(20);
-	const divRightJs = divyAll.item(22);
+	const divLeft = divyAll.item(14);
+	const divRight = divyAll.item(18);
+	const divCenter = divyAll.item(16);
+	const divLeftJs = divyAll.item(21);
+	const divRightJs = divyAll.item(23);
 	const dataDivLeft = divLeft.getBoundingClientRect();
 	const YDivLeft = dataDivLeft.top + dataDivLeft.height/2;
 	const dataDivRight = divRight.getBoundingClientRect();
@@ -73,6 +74,8 @@ window.addEventListener("scroll", function() {
 	const YDivLeftJs = dataDivLeftJs.top + dataDivLeftJs.height/2;
 	const dataDivRightJs = divRightJs.getBoundingClientRect();
 	const YDivRightJs = dataDivRightJs.top + dataDivRightJs.height/2;
+	const dataFooter = footer.getBoundingClientRect();
+	const YFooter = dataFooter.top + dataFooter.height/2;
 	
 	if (YDivLeft < window.innerHeight) {
 		divLeft.classList.add("LeftToRight");
@@ -94,6 +97,10 @@ window.addEventListener("scroll", function() {
 		divRightJs.classList.add("RightToLeft");
 	}
 	
+	if (YFooter < window.innerHeight) {
+		footer.classList.add("appearing-footer");
+	}
+	
 	
 	
 	/*const tiles = document.getElementById("tiles");
@@ -111,8 +118,7 @@ window.addEventListener("scroll", function() {
 	if (YTilesJs < window.innerHeight) {
 		tilesJs.classList.add("appearing-from-bottom");
 	}*/
-})
+});
 
 
 /*17 15 13*/
-

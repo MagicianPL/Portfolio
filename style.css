@@ -247,14 +247,15 @@ header::after {
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
+	padding-top: 26rem;
+	padding-bottom: 20rem;
+	box-sizing: border-box;
 }
 
 main {
 	position: relative;
 	top: 15px;
 	min-height: 100vh;
-	padding-top: 26rem;
-	padding-bottom: 20rem;
 	z-index: 1;
 }
 
@@ -330,7 +331,7 @@ body::after {
 	margin-bottom: 2rem;
 }
 
-main > img {
+#container-max-width > img {
 	width: 19rem;
 	position: absolute;
 	left: 0;
@@ -709,6 +710,13 @@ footer {
 	display: flex;
 	align-items: center;
 	z-index: 2;
+	visibility: hidden;
+}
+
+.appearing-footer {
+	animation: appearing-from-bottom;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 
 footer > a {
