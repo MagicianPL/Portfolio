@@ -592,6 +592,27 @@ h2 {
 	opacity: 0.8;
 }
 
+@keyframes animation-span {
+	40% {
+		transform: translateX(-200px);
+		visibility: hidden;
+	}
+	
+	41% {
+		visibility: visible;
+		transform: translateY(-200px);
+	}
+	
+	42% {
+		visibility: visible;
+	}
+	
+	100% {
+		visibility: visible;
+		transform: translateY(0);
+	}
+}
+
 #tiles-js {
 	display: flex;
 	width: 100rem;
@@ -833,6 +854,16 @@ a, a:hover, a:visited, a:active {
 		 font-size: 5rem;
 		 min-height: 20rem;
 		 color: white;
+		 transform: translateY(-100%);
+		 animation: hamburger-divs;
+		 animation-duration: 1.5s;
+		 animation-fill-mode: forwards;
+	 }
+	 
+	 @keyframes hamburger-divs {
+		 100% {
+			 transform: translateY(0);
+		 }
 	 }
 	 
 	 #hamburger-menu > div:hover {
@@ -899,11 +930,17 @@ a, a:hover, a:visited, a:active {
 		 margin-top: 2rem;
 	 }
 	 
+	 #container-max-width > img {
+		 width: 20rem;
+	 }
+	 
 	 #o-mnie {
 		 width: 85%;
 		 padding-left: 2rem;
 		 padding-right: 2rem;
+		 padding-top: 13rem;
 		 text-align: center;
+		 font-size: 3.5rem;
 	 }
 	 
 	 @keyframes toptobottom {
@@ -1068,6 +1105,16 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 		 min-height: 20rem;
 		 color: white;
+		 transform: translateY(-100%);
+		 animation: hamburger-divs;
+		 animation-duration: 1.5s;
+		 animation-fill-mode: forwards;
+	 }
+	 
+	 @keyframes hamburger-divs {
+		 100% {
+			 transform: translateY(0);
+		 }
 	 }
 	 
 	 #hamburger-menu > div:hover {
