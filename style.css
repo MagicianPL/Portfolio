@@ -136,7 +136,7 @@ header {
 	position: relative;
 	top: 60px;
 	color: black;
-	font-size: 7rem;
+	font-size: 8rem;
 	box-sizing: border-box;
 	font-weight: bold;
 	margin-bottom: 45px;
@@ -149,7 +149,8 @@ header::before {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("bg.jpg");
+	background-image: url("bg.jpg")/*, url("bg2.jpg")*/;
+	/*background-blend-mode: overlay;*/
 	background-size: cover;
 	opacity: 0.7;
 	z-index: -3;
@@ -172,18 +173,13 @@ header::after {
 	width: 90%;
 	margin: 0 auto;
 	height: 100%;
-	padding-top: 3rem;
+	padding-top: 4rem;
 	box-sizing: border-box;
 	text-align: right;
 }
 
-#wrapper > p:nth-child(2) {
-	font-size: 8.2rem;
-	margin: 10px 0 0 0;
-}
-
-#wrapper > p:nth-child(3) {
-	font-size: 8.2rem;
+#wrapper > p {
+	font-size: 7.2rem;
 }
 
 .color {
@@ -262,8 +258,8 @@ main {
 main::before {
 	content: "";
 	position: absolute;
-	width: 15rem;
-	height: 15rem;
+	width: 18rem;
+	height: 18rem;
 	top: 0rem;
 	left: 0rem;
 	background-color: #4d0045;
@@ -278,8 +274,8 @@ main::before {
 body::after {
 	content: "";
 	position: absolute;
-	width: 15rem;
-	height: 15rem;
+	width: 18rem;
+	height: 18rem;
 	bottom: 0rem;
 	right: 0rem;
 	background-color: #4d0045;
@@ -295,7 +291,7 @@ body::after {
 	text-align: left;
 	font-size: 2rem;
 	width: 82rem;
-	border: 2px solid gold;
+	border: 2px solid #dce874/*#8ee874*/;
 	margin: 0 auto;
 	padding: 10rem 7rem 3rem 7rem;
 	position: relative;
@@ -407,6 +403,11 @@ body::after {
 	display: block;
 }
 
+#logo img:hover {
+	transform: translateY(5px);
+	transition: 1s;
+}
+
 #animations {
 	font-size: 2.4rem;
 	font-weight: bold;
@@ -450,7 +451,7 @@ body::after {
 	align-items: center;
 	flex-direction: column;
 	-webkit-box-shadow: inset 0px 0px 12px -3px #80080; 
-	box-shadow: inset 0px 0px 12px -3px #800080;
+	/*box-shadow: inset 0px 0px 12px -3px #800080;*/
 	visibility: hidden;
 }
 
@@ -476,6 +477,7 @@ body::after {
 #sub-main > div:last-child > p {
 	margin-bottom: 4rem;
 	text-align: center;
+	color: #4d0045;
 }
 
 @keyframes sentences {
@@ -544,6 +546,7 @@ h2 {
 #tiles > a:nth-child(1) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
+	opacity: 0.6;
 }
 
 #tiles > a:nth-child(2) > div::before {
@@ -561,6 +564,7 @@ h2 {
 #tiles > a:nth-child(2) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
+	opacity: 0.6;
 }
 
 #tiles > a:nth-child(3) > div::before {
@@ -578,6 +582,7 @@ h2 {
 #tiles > a:nth-child(3) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
+	opacity: 0.6;
 }
 
 #tiles > a > div > div {
@@ -682,6 +687,7 @@ h2 {
 #tiles-js > a:nth-child(1) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
+	opacity: 0.6;
 }
 
 #tiles-js > a:nth-child(2) > div::before {
@@ -699,6 +705,7 @@ h2 {
 #tiles-js > a:nth-child(2) > div:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
+	opacity: 0.6;
 }
 
 #tiles-js > a > div > div {
@@ -720,12 +727,11 @@ h2 {
 
 footer {
 	width: 100%;
-	height: 7.5rem;
+	height: 10.5rem;
 	background-color: black;
 	z-index: -10001;
 	color: white;
-	font-size: 3.3rem;
-	line-height: 7.5rem;
+	font-size: 2.5rem;
 	padding-left: 10rem;
 	box-sizing: border-box;
 	display: flex;
@@ -1336,11 +1342,11 @@ a, a:hover, a:visited, a:active {
 }
 	 
 	 .white-line {
-		left: 20rem;
+		left: 23rem;
 	 }
 	 
 	 .white-line:nth-child(2) {
-		 left: 59rem;
+		 left: 56rem;
 	 }
 	 
 	 #container-overflow {
