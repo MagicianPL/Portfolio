@@ -246,6 +246,7 @@ header::after {
 	padding-top: 26rem;
 	padding-bottom: 20rem;
 	box-sizing: border-box;
+	z-index: -100;
 }
 
 main {
@@ -510,12 +511,12 @@ h2 {
 	width: 100rem;
 	min-height: 30rem;
 	margin: 0 auto;
-	margin-bottom: 7rem;
+	margin-bottom: 1rem;
 	justify-content: space-between;
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
-#tiles > a > div {
+#tiles a > div {
 	width: 30rem;
 	height: 30rem;
 	position: relative;
@@ -523,15 +524,18 @@ h2 {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	background-color: white;
+	visibility: hidden;
+	z-index: 10;
 	/*border: 2px solid #4d0045;*/
 }
 
-#tiles > a > div:hover {
+#tiles a > div:hover {
 	border: 2px solid #4d0045;
 	box-sizing: border-box;
 }
 
-#tiles > a:nth-child(1) > div::before {
+#Space-Coff::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -543,13 +547,13 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > a:nth-child(1) > div:hover::before {
+#Space-Coff:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 0.6;
 }
 
-#tiles > a:nth-child(2) > div::before {
+#Wyczesani::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -561,13 +565,13 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > a:nth-child(2) > div:hover::before {
+#Wyczesani:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 0.6;
 }
 
-#tiles > a:nth-child(3) > div::before {
+#Inwestor::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -579,13 +583,13 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles > a:nth-child(3) > div:hover::before {
+#Inwestor:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 0.6;
 }
 
-#tiles > a > div > div {
+#tiles a > div > div {
 	width: 100%;
 	height: 8rem;
 	background-color: grey;
@@ -595,6 +599,41 @@ h2 {
 	line-height: 8rem;
 	z-index: 10;
 	opacity: 0.8;
+}
+
+.container-all {
+	display: flex;
+	flex-direction: column;
+	width: 30rem;
+	position: relative;
+	align-items: center;
+}
+
+.description-tile {
+	font-size: 2rem;
+	color: black;
+	width: 30rem;
+	max-height: 30rem;
+	padding: 2rem 1rem 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	transform: translateY(-100%);
+	visibility: hidden;
+}
+
+#tiles a:hover + .description-tile {
+	visibility: visible;
+	transform: translateY(0);
+	transition: transform 1s;
+	transition-delay: 0.2s;
+}
+
+.description-tile:hover {
+	visibility: visible;
+	transform: translateY(0);
 }
 
 @keyframes animation-span {
@@ -627,7 +666,14 @@ h2 {
 	justify-content: space-around;
 }
 
-#tiles-js > a > div {
+#tiles-js a:hover + .description-tile {
+	visibility: visible;
+	transform: translateY(0);
+	transition: transform 1s;
+	transition-delay: 0.2s;
+}
+
+#tiles-js a > div {
 	width: 30rem;
 	height: 30rem;
 	position: relative;
@@ -636,6 +682,8 @@ h2 {
 	align-items: center;
 	cursor: pointer;
 	visibility: hidden;
+	background-color: white;
+	z-index: 10;
 }
 
 @keyframes LeftToRight {
@@ -672,7 +720,7 @@ h2 {
 	animation-fill-mode: forwards;
 }
 
-#tiles-js > a:nth-child(1) > div::before {
+#Color-Flipper::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -684,13 +732,13 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles-js > a:nth-child(1) > div:hover::before {
+#Color-Flipper:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 0.6;
 }
 
-#tiles-js > a:nth-child(2) > div::before {
+#Kostka::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -702,13 +750,13 @@ h2 {
 	opacity: 0.4;
 }
 
-#tiles-js > a:nth-child(2) > div:hover::before {
+#Kostka:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 0.6;
 }
 
-#tiles-js > a > div > div {
+#tiles-js a > div > div {
 	width: 100%;
 	height: 8rem;
 	background-color: grey;
@@ -720,7 +768,7 @@ h2 {
 	opacity: 0.8;
 }
 
-#tiles-js > a > div:hover {
+#tiles-js a > div:hover {
 	border: 2px solid #4d0045;
 	box-sizing: border-box;
 }
@@ -1015,13 +1063,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles > a > div {
+	 #tiles a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles > a > div > div {
+	 #tiles a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -1033,16 +1081,20 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles-js > a > div {
+	 #tiles-js a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js > a > div > div {
+	  #tiles-js a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
+	 }
+	 
+	 .description-tile {
+		 display: none;
 	 }
  }
  
@@ -1271,13 +1323,13 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles > a > div {
+	 #tiles a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles > a > div > div {
+	 #tiles a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
@@ -1289,16 +1341,20 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
-	 #tiles-js > a > div {
+	 #tiles-js a > div {
 		 width: 45rem;
 		 height: 45rem;
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js > a > div > div {
+	  #tiles-js a > div > div {
 		 height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
+	 }
+	 
+	  .description-tile {
+		 display: none;
 	 }
  }
  
@@ -1351,6 +1407,14 @@ a, a:hover, a:visited, a:active {
 	 
 	 #container-overflow {
 		 margin-bottom: 8rem;
+	 }
+	 
+	 #tiles {
+		 margin-bottom: 10rem;
+	 }
+	 
+	  .description-tile {
+		 display: none;
 	 }
  }
  
