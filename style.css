@@ -5,6 +5,7 @@
 
 html {
 	font-size: 62.5%;
+	-webkit-text-size-adjust: none;
 	scroll-behavior: smooth;
 }
 
@@ -839,16 +840,12 @@ a, a:hover, a:visited, a:active {
   text-decoration: none;
  }
  
- @media (min-width: 320px) and (max-width: 480px) {
+ @media (max-width: 480px) {
 	 html {
 		 font-size: 30%;
+		 -webkit-text-size-adjust: none;
 	 }
-	 
-	 body {
-		 
-	 }
-	 
-	 
+	
 	 nav > img {
 		 display: block;
 	 }
@@ -1036,6 +1033,7 @@ a, a:hover, a:visited, a:active {
 	 
 	 #logo {
 		 align-items: center;
+		 margin-right: 0;
 	 }
 	 
 	 #logo > img {
@@ -1101,6 +1099,7 @@ a, a:hover, a:visited, a:active {
  @media (min-width: 481px) and (max-width: 768px) {
 	 html {
 		 font-size: 45%;
+		 -webkit-text-size-adjust: none;
 	 }
 	 
 	 
@@ -1296,6 +1295,7 @@ a, a:hover, a:visited, a:active {
 	 
 	 #logo {
 		 align-items: center;
+		 margin-right: 0;
 	 }
 	 
 	 #logo > img {
@@ -1361,6 +1361,7 @@ a, a:hover, a:visited, a:active {
  @media (min-width: 769px) and (max-width: 1024px) {
 	 	 html {
 		 font-size: 45%;
+		 -webkit-text-size-adjust: none;
 	 }
 	 
 	 header {
@@ -1421,6 +1422,7 @@ a, a:hover, a:visited, a:active {
  @media (min-width: 1600px) {
 	 html {
 		 font-size: 75%;
+		 -webkit-text-size-adjust: none;
 	 }
  }
  
