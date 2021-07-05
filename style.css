@@ -38,6 +38,17 @@ nav {
 	display: flex;
 	position: fixed;
 	z-index: 9999;
+	opacity: 1;
+}
+
+nav:hover {
+	opacity: 1;
+	transition-duration: 1s;
+}
+
+.opacity {
+	opacity: 0.5;
+	transition-duration: 2s;
 }
 
 nav > ul {
@@ -131,45 +142,6 @@ nav > ul > li:nth-child(3):hover > ol {
 	display: flex;
 }
 
-header {
-	width: 100%;
-	height: 40rem;
-	position: relative;
-	top: 60px;
-	color: black;
-	font-size: 8rem;
-	box-sizing: border-box;
-	font-weight: bold;
-	margin-bottom: 45px;
-}
-
-header::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url("bg.jpg")/*, url("bg2.jpg")*/;
-	/*background-blend-mode: overlay;*/
-	background-size: cover;
-	opacity: 0.7;
-	z-index: -3;
-}
-
-header::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #800080;
-	opacity: 0.3;
-	z-index: -2;
-	clip-path: polygon(0 0, 86% 0, 58% 100%, 0% 100%);
-}
-
 #wrapper {
 	width: 90%;
 	margin: 0 auto;
@@ -240,66 +212,105 @@ header::after {
 	}
 }
 
-#container-max-width {
+.container-max-width {
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
-	padding-top: 26rem;
 	padding-bottom: 20rem;
 	box-sizing: border-box;
-	z-index: -100;
+	overflow: hidden;
+}
+
+#container-main {
+	padding-top: 6rem;
+	width: 100%;
 }
 
 main {
+	box-sizing: border-box;
+	width: 100%;
+	/*min-height: 100vh;*/
 	position: relative;
-	top: 15px;
-	min-height: 100vh;
-	z-index: 1;
+	overflow: hidden;
+	margin-bottom: 8rem;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
 }
 
-main::before {
-	content: "";
+#circle {
+	display: none;
+}
+
+main > svg {
 	position: absolute;
-	width: 18rem;
-	height: 18rem;
-	top: 0rem;
-	left: 0rem;
-	background-color: #4d0045;
-	 border-top-right-radius:0;
-    border-top-left-radius:0;
-    border-bottom-right-radius:0;
-    border-bottom-left-radius:100%;
-	z-index: -10000;
-	transform: rotate(270deg);
+	top: 0;
+	z-index: -1;
 }
 
-body::after {
-	content: "";
+path {
+	fill: #4d0045;
+}
+
+#svg-container {
 	position: absolute;
-	width: 18rem;
-	height: 18rem;
-	bottom: 0rem;
-	right: 0rem;
-	background-color: #4d0045;
-	 border-top-right-radius:0;
-    border-top-left-radius:0;
-    border-bottom-right-radius:0;
-    border-bottom-left-radius:100%;
-	z-index: 3;
-	transform: rotate(90deg);
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
 }
 
-#o-mnie {
-	text-align: left;
+#svg-container svg {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+main img {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	vertical-align: top;
+	max-width: 36%;
+	opacity: 0;
+	animation: appear 2.5s forwards;
+	animation-delay: 1s;
+}
+
+@keyframes appear {
+	100% {
+		opacity: 1;
+	}
+}
+
+#description {
+	width: 50%;
+	z-index: -2;
 	font-size: 2rem;
-	width: 82rem;
-	border: 2px solid #dce874/*#8ee874*/;
-	margin: 0 auto;
-	padding: 10rem 7rem 3rem 7rem;
-	position: relative;
+	/*top: 165px;*/
+	margin: 10% 0 10% 35%;
+	box-sizing: border-box;
+	padding: 0px 30px 10px 10px;
+	/*transition: all 2s;*/
 }
 
-#o-mnie:hover::before {
+.scale {
+	transform: scaleX(0.6);
+	transition: transform 2s;
+}
+
+#description p {
+	margin-bottom: 2rem;
+	/*transition: all 2s;*/
+}
+
+.go-away {
+	transform: translateY(-100%);
+	opacity: 0;
+	transition: all 2s;
+}
+
+
+main:hover::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -312,8 +323,9 @@ body::after {
 	animation: toptobottom;
 	animation-fill-mode: forwards;
 	animation-duration: 2s;
-	z-index: 2;
+	z-index: -2;
 }
+
 
 @keyframes toptobottom {
 	0% {
@@ -325,45 +337,6 @@ body::after {
 	}
 }
 
-#o-mnie p {
-	margin-bottom: 2rem;
-}
-
-#container-max-width > img {
-	width: 19rem;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	top: 14rem;
-	z-index: 3;
-}
-
-#container-overflow {
-	overflow: hidden;
-	margin-bottom: 5rem;
-}
-
-.white-line {
-	width: 15rem;
-	height: 1px;
-	border-top: 3px solid white;
-	position: absolute;
-	top: -2px;
-	left: 23.9rem;
-	z-index: 5;
-}
-
-.white-line:nth-child(2) {
-	width: 15rem;
-	height: 1px;
-	border-top: 3px solid white;
-	position: absolute;
-	top: -2px;
-	z-index: 5;
-	left: 57.2rem;
-}
 
 #sub-main {
 	padding: 0 4rem 0 4rem;
@@ -509,16 +482,20 @@ h2 {
 
 #tiles {
 	display: flex;
-	width: 100rem;
+	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
 	margin-bottom: 1rem;
-	justify-content: space-between;
+	justify-content: space-around;
 	/*visibility: hidden;*/
 }
 
+#tiles a {
+	width: 40rem;
+}
+
 #tiles a > div {
-	width: 30rem;
+	width: 100%;
 	height: 30rem;
 	position: relative;
 	overflow: hidden;
@@ -605,7 +582,7 @@ h2 {
 .container-all {
 	display: flex;
 	flex-direction: column;
-	width: 30rem;
+	width: 40rem;
 	position: relative;
 	align-items: center;
 }
@@ -613,7 +590,7 @@ h2 {
 .description-tile {
 	font-size: 2rem;
 	color: black;
-	width: 30rem;
+	width: 40rem;
 	max-height: 30rem;
 	padding: 2rem 1rem 0 1rem;
 	display: flex;
@@ -658,9 +635,18 @@ h2 {
 	}
 }
 
+.divider {
+	width: 70%;
+	height: 2px;
+	opacity: 0.5;
+	background: rgb(236,4,6);
+	background: radial-gradient(circle, rgba(236,4,6,1) 0%, rgba(233,223,190,1) 0%, rgba(223,214,181,1) 22%, rgba(221,212,179,1) 22%, rgba(210,201,168,1) 100%, rgba(164,155,124,1) 100%);
+	margin: 0 auto 8rem auto;
+}
+
 #tiles-js {
 	display: flex;
-	width: 100rem;
+	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
 	margin-bottom: 7rem;
@@ -674,8 +660,12 @@ h2 {
 	transition-delay: 0.2s;
 }
 
+#tiles-js a {
+	width: 40rem;
+}
+
 #tiles-js a > div {
-	width: 30rem;
+	width: 100%;
 	height: 30rem;
 	position: relative;
 	overflow: hidden;
@@ -896,8 +886,6 @@ a, a:hover, a:visited, a:active {
 		 opacity: 0.7;
 	 }
 	 
-	 
-	 
 	 #hamburger-menu > div {
 		 display: flex;
 		 justify-content: center;
@@ -945,8 +933,6 @@ a, a:hover, a:visited, a:active {
 		 display: flex;
 	 }
 	 
-	 
-	 
 	 nav {
 		 justify-content: center;
 		 align-items: center;
@@ -956,66 +942,42 @@ a, a:hover, a:visited, a:active {
 		 display: none;
 	 }
 	 
-	 header {
-		 font-size: 6rem;
+	 #container-main {
+		 padding-top: 60px;
 	 }
 	 
-	 .color {
-		 font-size: 8rem;
-	 }
-	 
-	 #wrapper {
+	 #description {
+		 width: 100%;
 		 text-align: center;
-	 }
-	 
-	 #wrapper > p {
-		 text-align: center;
-		 font-size: 6rem;
-	 }
-	 
-	 #wrapper > p:nth-child(2) {
+		 padding: 2rem;
+		 font-size: 4rem;
 		 margin-left: 0;
 	 }
 	 
-	 #wrapper > p:nth-child(3) {
-		 margin-top: 2rem;
+	 main {
+		 display: block;
 	 }
 	 
-	 #container-max-width > img {
-		 width: 20rem;
+	 main img {
+		 display: none;
 	 }
 	 
-	 #o-mnie {
-		 width: 85%;
-		 padding-left: 2rem;
-		 padding-right: 2rem;
-		 padding-top: 13rem;
-		 text-align: center;
-		 font-size: 3.5rem;
-	 }
-	 
-	 @keyframes toptobottom {
-	0% {
-		transform: translateY(-100px);
-	}
-	
-	100% {
-		opacity: 0.1;
-	}
-}
-	 
-	 .white-line {
-		display: none;
-	 }
-	 
-	 #container-overflow {
-		 margin-bottom: 8rem;
+	 #circle {
+		 display: block;
+		 position: static;
+		 margin: 13rem auto 0 auto;
+		 width: 120px;
+		 margin-bottom: 4rem;
 	 }
 	 
 	 #sub-main {
 		 flex-direction: column;
 		 min-height: 40rem;
 		 align-items: center;
+	 }
+	 
+	 #tiles a {
+		 width: 45rem;
 	 }
 	 
 	 #sub-main > p:nth-child(1) {
@@ -1079,6 +1041,10 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
+	 #tiles-js a {
+		 width: 45rem;
+	 }
+	 
 	 #tiles-js a > div {
 		 width: 45rem;
 		 height: 45rem;
@@ -1103,7 +1069,7 @@ a, a:hover, a:visited, a:active {
 	 }
 	 
 	 
-	 nav > img {
+	nav > img {
 		 display: block;
 	 }
 	 
@@ -1115,7 +1081,6 @@ a, a:hover, a:visited, a:active {
 	 #hamburger-menu {
 		 width: 100%;
 		 min-height: 100vh;
-		 font-size: 5rem;
 		 display: flex;
 		 flex-direction: column;
 		 justify-content: center;
@@ -1142,24 +1107,23 @@ a, a:hover, a:visited, a:active {
 		 height: 6rem;
 		 text-align: center;
 		 line-height: 6rem;
-		 border-radius: 50%;
 		 color: white;
 		 border: 1px solid red;
 		 position: absolute;
 		 top: 3rem;
 		 right: 3rem;
+		 border-radius: 50%;
 	 }
 	 
 	 #closing:hover {
 		 opacity: 0.7;
 	 }
 	 
-	 
-	 
 	 #hamburger-menu > div {
 		 display: flex;
 		 justify-content: center;
 		 align-items: center;
+		 font-size: 5rem;
 		 min-height: 20rem;
 		 color: white;
 		 transform: translateY(-100%);
@@ -1183,7 +1147,7 @@ a, a:hover, a:visited, a:active {
 		flex-direction: column;
 	 }
 	 
-	  #hamburger-menu > div:nth-child(3) > a:nth-child(3) { /*inwestor*/
+	 #hamburger-menu > div:nth-child(3) > a:nth-child(3) { /*inwestor*/
 		 padding-bottom: 5rem;
 		 box-sizing: border-box;
 	 }
@@ -1198,76 +1162,44 @@ a, a:hover, a:visited, a:active {
 		display: none;
 	 }
 	 
-	  #hamburger-menu > div:nth-child(2) > a {
+	 #hamburger-menu > div:nth-child(2) > a {
 		 display: flex;
 	 }
 	 
-	 
-	 
 	 nav {
-		 height: 60px;
 		 justify-content: center;
 		 align-items: center;
-		 
 	 }
 	 
 	 nav > ul {
 		 display: none;
 	 }
 	 
-	 header {
-		 font-size: 6rem;
+	 #container-main {
+		 padding-top: 60px;
 	 }
 	 
-	 .color {
-		 font-size: 8rem;
-	 }
-	 
-	 #wrapper {
+	 #description {
+		 width: 100%;
 		 text-align: center;
-	 }
-	 
-	 #wrapper > p {
-		 font-size: 6rem !important;
-		 text-align: center;
-	 }
-	 
-	 #wrapper > p:nth-child(3) {
-		 margin-top: 2rem;
+		 padding: 4rem;
+		 font-size: 2.5rem;
+		 margin-left: 0;
 	 }
 	 
 	 main {
-		
+		 display: block;
 	 }
 	 
-	 #o-mnie {
-		 width: 85%;
-		 padding-left: 2rem;
-		 padding-right: 2rem;
-		 text-align: center;
-		 font-size: 2.2rem;
+	 main img {
+		 display: none;
 	 }
 	 
-	 #o-mnie > p {
-		 margin-bottom: 3rem;
-	 }
-	 
-	 @keyframes toptobottom {
-	0% {
-		transform: translateY(-100px);
-	}
-	
-	100% {
-		opacity: 0.1;
-	}
-}
-	 
-	 .white-line {
-		display: none;
-	 }
-	 
-	 #container-overflow {
-		 margin-bottom: 8rem;
+	 #circle {
+		 display: block;
+		 position: static;
+		 margin: 13rem auto 0 auto;
+		 width: 170px;
 	 }
 	 
 	 #sub-main {
@@ -1276,21 +1208,21 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
+	 #tiles a {
+		 width: 45rem;
+	 }
+	 
 	 #sub-main > p:nth-child(1) {
 		 align-items: flex-end;
 		 transform: none;
 		 writing-mode: lr;
 		 margin-bottom: 4rem;
-		 font-size: 5rem;
 	 }
 	 
 	 #sub-main > div:last-child {
-		 font-size: 3rem;
+		 font-size: 3.4rem;
 		 width: 95%;
 		 padding: 3rem;
-		 display: flex;
-		 align-items: center;
-		 justify-content: center;
 	 }
 	 
 	 #logo {
@@ -1299,8 +1231,8 @@ a, a:hover, a:visited, a:active {
 	 }
 	 
 	 #logo > img {
-		 width: 19rem;
-		 height: 19rem;
+		 width: 15rem;
+		 height: 15rem;
 		 margin-bottom: 5rem;
 	 }
 	 
@@ -1341,6 +1273,10 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 	 }
 	 
+	 #tiles-js a {
+		 width: 45rem;
+	 }
+	 
 	 #tiles-js a > div {
 		 width: 45rem;
 		 height: 45rem;
@@ -1353,61 +1289,29 @@ a, a:hover, a:visited, a:active {
 		 line-height: 15rem;
 	 }
 	 
-	  .description-tile {
+	 .description-tile {
 		 display: none;
 	 }
  }
  
  @media (min-width: 769px) and (max-width: 1024px) {
-	 	 html {
+		html {
 		 font-size: 45%;
 		 -webkit-text-size-adjust: none;
 	 }
 	 
-	 header {
-		 font-size: 6rem;
+	 main img {
+		 max-width: 40%;
 	 }
 	 
-	 .color {
-		 font-size: 8rem;
+	 main {
 	 }
 	 
-	 #wrapper > p:nth-child(2) {
-		 margin-left: 0;
-		 font-size: 7rem;
-	 }
-	 
-	 #wrapper > p:nth-child(3) {
-		 margin-top: 2rem;
-	 }
-	 
-	 #o-mnie {
-		 width: 90rem;
-		 padding-left: 2rem;
-		 padding-right: 2rem;
-		 text-align: center;
-	 }
-	 
-	 @keyframes toptobottom {
-	0% {
-		transform: translateY(-100px);
-	}
-	
-	100% {
-		opacity: 0.1;
-	}
-}
-	 
-	 .white-line {
-		left: 23rem;
-	 }
-	 
-	 .white-line:nth-child(2) {
-		 left: 56rem;
-	 }
-	 
-	 #container-overflow {
-		 margin-bottom: 8rem;
+	 #description {
+		 margin-top: 100px;
+		 font-size: 2.3rem;
+		position: relative;
+		margin-bottom: 10rem;
 	 }
 	 
 	 #tiles {
@@ -1423,6 +1327,10 @@ a, a:hover, a:visited, a:active {
 	 html {
 		 font-size: 75%;
 		 -webkit-text-size-adjust: none;
+	 }
+	 
+	 #container-main {
+		 padding-top: 5.1rem;
 	 }
  }
  

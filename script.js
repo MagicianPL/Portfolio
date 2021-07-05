@@ -50,8 +50,45 @@ x.addEventListener("click", function(){
 const divyAll = document.getElementsByTagName("div");
 const footer = document.querySelector("footer");
 const opis = divyAll.item(12);
+const nav = document.querySelector("nav");
+const body = document.querySelector("body");
+const description = document.querySelector("#description");
+const allPInDesc = document.querySelectorAll("#description p");
 
 window.addEventListener("scroll", function() {
+	/*Dodaję przezroczystość do nav, kiedy strona jest scrollowana o jego wysokość*/
+	navHeight = nav.clientHeight;
+	const yNav = body.getBoundingClientRect().top + navHeight;
+	if (yNav < 0) {
+		nav.classList.add("opacity");
+	}
+	else {
+		nav.classList.remove("opacity");
+	};
+	
+	/*Ustawiam scalowanie i translatowanie w górę na description*/
+	const descRect = description.getBoundingClientRect();
+	const descY = descRect.top + descRect.height/7;
+	description.style.transition = "all 2s";
+	for (i=0; i < allPInDesc.length; i++) {
+			allPInDesc[i].style.transition = "all 2s";
+		};
+	
+	if (descY < 0) {
+		description.classList.add("scale");
+		for (i=0; i < allPInDesc.length; i++) {
+			allPInDesc[i].classList.add("go-away");
+		};
+	} else {
+		description.classList.remove("scale");
+		for (i=0; i < allPInDesc.length; i++) {
+			allPInDesc[i].classList.remove("go-away");
+		};
+	}
+	
+	
+	
+	
 	const dataOpis = opis.getBoundingClientRect();
 	const Y = dataOpis.top + dataOpis.height/1.5;
 	
@@ -101,19 +138,6 @@ window.addEventListener("scroll", function() {
 		footer.classList.add("appearing-footer");
 	}
 });
-
-/*
-const wysuwanyOpisSpodKafelek = document.querySelectorAll(".description-tile");
-const divLeft = document.querySelector("#Space-Coff");
-
-divLeft.addEventListener("mouseover", ()=> {
-	wysuwanyOpisSpodKafelek[0].classList.add("add-on-hover");
-});
-
-divLeft.addEventListener("mouseleave", ()=> {
-	wysuwanyOpisSpodKafelek[0].classList.remove("add-on-hover");
-});
-*/
 
 
 
