@@ -7,6 +7,7 @@ html {
 	font-size: 62.5%;
 	-webkit-text-size-adjust: none;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -216,9 +217,8 @@ nav > ul > li:nth-child(3):hover > ol {
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
-	padding-bottom: 20rem;
 	box-sizing: border-box;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #container-main {
@@ -477,7 +477,9 @@ h2 {
 	font-size: 4.2rem;
 	color: #4d0045;
 	text-align: center;
-	margin-bottom: 8rem;
+	position: relative;
+	transform: translateY(65%);
+	z-index: 2;
 }
 
 #tiles {
@@ -487,7 +489,35 @@ h2 {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 	justify-content: space-around;
+	position: relative;
+	padding: 10rem 0 3rem 0;
 	/*visibility: hidden;*/
+}
+
+.translate {
+	transform: translateY(6rem);
+	transition: transform 1.5s;
+}
+
+.translateh2 {
+	transform: translateY(calc(65% + 6rem));
+	transition: transform 1.5s;
+}
+
+.bg-tiles {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100vw;
+	margin-left: -50vw;
+	left: 50%;
+	background-image: url("bg.jpg");
+	background-size: cover;
+	z-index: -2;
+	opacity: 0.3;
+	background-color: blue;
+	-webkit-box-shadow: inset 0px 0px 10px 5px #FFFFFF; 
+	box-shadow: inset 0px 0px 10px 5px #FFFFFF;
 }
 
 #tiles a {
@@ -505,11 +535,13 @@ h2 {
 	background-color: white;
 	visibility: hidden;
 	z-index: 10;
+	animation-delay: 0.7s;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 	/*border: 2px solid #4d0045;*/
 }
 
 #tiles a > div:hover {
-	border: 2px solid #4d0045;
+	/*border: 2px solid #4d0045;*/
 	box-sizing: border-box;
 }
 
@@ -528,7 +560,7 @@ h2 {
 #Space-Coff:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
-	opacity: 0.6;
+	opacity: 1;
 }
 
 #Wyczesani::before {
@@ -546,7 +578,7 @@ h2 {
 #Wyczesani:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
-	opacity: 0.6;
+	opacity: 1;
 }
 
 #Inwestor::before {
@@ -564,7 +596,7 @@ h2 {
 #Inwestor:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
-	opacity: 0.6;
+	opacity: 1;
 }
 
 #tiles a > div > div {
@@ -649,8 +681,13 @@ h2 {
 	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
-	margin-bottom: 7rem;
 	justify-content: space-around;
+	position: relative;
+	padding: 10rem 0 3rem 0;
+}
+
+.second-bg {
+	background-image: url("bg2.jpg");
 }
 
 #tiles-js a:hover + .description-tile {
@@ -675,6 +712,8 @@ h2 {
 	visibility: hidden;
 	background-color: white;
 	z-index: 10;
+	animation-delay: 0.7s;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 @keyframes LeftToRight {
@@ -726,7 +765,25 @@ h2 {
 #Color-Flipper:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
-	opacity: 0.6;
+	opacity: 1;
+}
+
+#ToDo::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("balloons.jpg");
+	background-size: cover;
+	opacity: 0.4;
+}
+
+#ToDo:hover::before {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	opacity: 1;
 }
 
 #Kostka::before {
@@ -744,7 +801,7 @@ h2 {
 #Kostka:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
-	opacity: 0.6;
+	opacity: 1;
 }
 
 #tiles-js a > div > div {
@@ -760,7 +817,7 @@ h2 {
 }
 
 #tiles-js a > div:hover {
-	border: 2px solid #4d0045;
+	/*border: 2px solid #4d0045;*/
 	box-sizing: border-box;
 }
 

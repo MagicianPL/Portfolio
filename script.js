@@ -6,11 +6,18 @@ const mojeStrony = document.getElementById("moje-strony");
 const vanillaJs = document.getElementById("vanilla-js");
 const allA = document.getElementsByTagName("a");
 
-hamburgerIcon.addEventListener("click", showMenu);
+const divLeft = document.querySelector("#Space-Coff"); /*divyAll.item(14);*/
+const divRight = document.querySelector("#Inwestor"); /*divyAll.item(18);*/
+const divCenter = document.querySelector("#Wyczesani"); /*divyAll.item(16);*/
+const divLeftJs = document.querySelector("#ToDo"); /*divyAll.item(21);*/
+const divCenterJs = document.querySelector("#Color-Flipper"); /*divyAll.item(23);*/
+const divRightJs = document.querySelector("#Kostka"); /*divyAll.item(25);*/
 
 function showMenu() {
 	hamburgerMenu.style.display = "flex";	
-}
+};
+
+hamburgerIcon.addEventListener("click", showMenu);
 
 oMnie.addEventListener("click", function(){
 		hamburgerMenu.style.display = "none";
@@ -34,11 +41,13 @@ vanillaJs.addEventListener("click", function(){
 		if (allA.item(4).style.display =="none") {
 		allA.item(4).style.display="flex";
 		allA.item(5).style.display="flex";
+		allA.item(6).style.display="flex";
 		}
 		
 		else {
 		allA.item(4).style.display="none";
 		allA.item(5).style.display="none";
+		allA.item(6).style.display="none";
 		}
 	});
 	
@@ -54,6 +63,20 @@ const nav = document.querySelector("nav");
 const body = document.querySelector("body");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
+
+const tiles = document.querySelector("#tiles");
+const tilesJs = document.querySelector("#tiles-js");
+const h2 = document.querySelector("h2");
+
+const translateTiles = () => {
+	dataTilesJs = tilesJs.getBoundingClientRect();
+	tilesY = dataTilesJs.top + dataTilesJs.height / 2;
+	
+	if (tilesY < window.innerHeight) {
+		tiles.classList.add("translate");
+		h2.classList.add("translateh2");
+	};
+};
 
 window.addEventListener("scroll", function() {
 	/*Dodaję przezroczystość do nav, kiedy strona jest scrollowana o jego wysokość*/
@@ -84,7 +107,7 @@ window.addEventListener("scroll", function() {
 		for (i=0; i < allPInDesc.length; i++) {
 			allPInDesc[i].classList.remove("go-away");
 		};
-	}
+	};
 	
 	
 	
@@ -94,21 +117,21 @@ window.addEventListener("scroll", function() {
 	
 	if (Y < window.innerHeight) {
 		opis.classList.add("appearing-from-bottom");
-	}
+	};
 	
-	const divLeft = document.querySelector("#Space-Coff"); /*divyAll.item(14);*/
-	const divRight = document.querySelector("#Inwestor"); /*divyAll.item(18);*/
-	const divCenter = document.querySelector("#Wyczesani"); /*divyAll.item(16);*/
-	const divLeftJs = document.querySelector("#Color-Flipper"); /*divyAll.item(21);*/
-	const divRightJs = document.querySelector("#Kostka"); /*divyAll.item(23);*/
+	
+	
 	const dataDivLeft = divLeft.getBoundingClientRect();
 	const YDivLeft = dataDivLeft.top + dataDivLeft.height/2;
 	const dataDivRight = divRight.getBoundingClientRect();
 	const YDivRight = dataDivRight.top + dataDivRight.height/2;
 	const dataDivCenter = divCenter.getBoundingClientRect();
 	const YDivCenter = dataDivCenter.top + dataDivCenter.height/2;
+	
 	const dataDivLeftJs = divLeftJs.getBoundingClientRect();
 	const YDivLeftJs = dataDivLeftJs.top + dataDivLeftJs.height/2;
+	const dataDivCenterJs = divCenterJs.getBoundingClientRect();
+	const YDivCenterJs = dataDivCenterJs.top + dataDivCenterJs.height/2;
 	const dataDivRightJs = divRightJs.getBoundingClientRect();
 	const YDivRightJs = dataDivRightJs.top + dataDivRightJs.height/2;
 	const dataFooter = footer.getBoundingClientRect();
@@ -130,6 +153,10 @@ window.addEventListener("scroll", function() {
 		divLeftJs.classList.add("LeftToRight");
 	}
 	
+	if (YDivCenterJs < window.innerHeight) {
+		divCenterJs.classList.add("appearing-from-bottom");
+	}
+	
 	if (YDivRightJs < window.innerHeight) {
 		divRightJs.classList.add("RightToLeft");
 	}
@@ -137,6 +164,8 @@ window.addEventListener("scroll", function() {
 	if (YFooter < window.innerHeight) {
 		footer.classList.add("appearing-footer");
 	}
+	
+	translateTiles();
 });
 
 
