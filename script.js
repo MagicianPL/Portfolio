@@ -9,9 +9,11 @@ const allA = document.getElementsByTagName("a");
 const divLeft = document.querySelector("#Space-Coff"); /*divyAll.item(14);*/
 const divRight = document.querySelector("#Inwestor"); /*divyAll.item(18);*/
 const divCenter = document.querySelector("#Wyczesani"); /*divyAll.item(16);*/
-const divLeftJs = document.querySelector("#ToDo"); /*divyAll.item(21);*/
-const divCenterJs = document.querySelector("#Color-Flipper"); /*divyAll.item(23);*/
-const divRightJs = document.querySelector("#Kostka"); /*divyAll.item(25);*/
+const toDo = document.querySelector("#ToDo"); /*divyAll.item(21);*/
+const colorFlipper = document.querySelector("#Color-Flipper"); /*divyAll.item(23);*/
+const dice = document.querySelector("#Kostka"); /*divyAll.item(25);*/
+const magicBall = document.querySelector("#Magic-Ball");
+const stopwatch = document.querySelector("#stopwatch");
 
 function showMenu() {
 	hamburgerMenu.style.display = "flex";	
@@ -128,12 +130,14 @@ window.addEventListener("scroll", function() {
 	const dataDivCenter = divCenter.getBoundingClientRect();
 	const YDivCenter = dataDivCenter.top + dataDivCenter.height/2;
 	
-	const dataDivLeftJs = divLeftJs.getBoundingClientRect();
-	const YDivLeftJs = dataDivLeftJs.top + dataDivLeftJs.height/2;
-	const dataDivCenterJs = divCenterJs.getBoundingClientRect();
-	const YDivCenterJs = dataDivCenterJs.top + dataDivCenterJs.height/2;
-	const dataDivRightJs = divRightJs.getBoundingClientRect();
-	const YDivRightJs = dataDivRightJs.top + dataDivRightJs.height/2;
+	const dataToDo = toDo.getBoundingClientRect();
+	const YToDo = dataToDo.top + dataToDo.height/2;
+	const dataMagicBall = magicBall.getBoundingClientRect();
+	const YMagicBall = dataMagicBall.top + dataMagicBall.height/2;
+	const dataStopwatch = stopwatch.getBoundingClientRect();
+	const YStopwatch = dataStopwatch.top + dataStopwatch.height/2;
+	const dataDice = dice.getBoundingClientRect();
+	const YDice = dataDice.top + dataDice.height/2;
 	const dataFooter = footer.getBoundingClientRect();
 	const YFooter = dataFooter.top + dataFooter.height/2;
 	
@@ -149,16 +153,18 @@ window.addEventListener("scroll", function() {
 		divCenter.classList.add("appearing-from-bottom");
 	}
 	
-	if (YDivLeftJs < window.innerHeight) {
-		divLeftJs.classList.add("LeftToRight");
+	if (YToDo < window.innerHeight) {
+		toDo.classList.add("LeftToRight");
 	}
 	
-	if (YDivCenterJs < window.innerHeight) {
-		divCenterJs.classList.add("appearing-from-bottom");
+	if (YMagicBall < window.innerHeight) {
+		magicBall.classList.add("appearing-from-bottom");
+		colorFlipper.classList.add("appearing-from-bottom");
 	}
 	
-	if (YDivRightJs < window.innerHeight) {
-		divRightJs.classList.add("RightToLeft");
+	if (YStopwatch < window.innerHeight) {
+		stopwatch.classList.add("RightToLeft");
+		dice.classList.add("RightToLeft");
 	}
 	
 	if (YFooter < window.innerHeight) {

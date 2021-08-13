@@ -684,6 +684,7 @@ h2 {
 	justify-content: space-around;
 	position: relative;
 	padding: 10rem 0 3rem 0;
+	flex-wrap: wrap;
 }
 
 .second-bg {
@@ -781,6 +782,42 @@ h2 {
 }
 
 #ToDo:hover::before {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	opacity: 1;
+}
+
+#Magic-Ball::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("8.jpg");
+	background-size: cover;
+	opacity: 0.4;
+}
+
+#Magic-Ball:hover::before {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	opacity: 1;
+}
+
+#stopwatch::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("time.jpg");
+	background-size: cover;
+	opacity: 0.4;
+}
+
+#stopwatch:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 1;
@@ -1352,7 +1389,7 @@ a, a:hover, a:visited, a:active {
  }
  
  @media (min-width: 769px) and (max-width: 1024px) {
-		html {
+	html {
 		 font-size: 45%;
 		 -webkit-text-size-adjust: none;
 	 }
@@ -1376,12 +1413,17 @@ a, a:hover, a:visited, a:active {
 		 margin-bottom: 10rem;
 	 }
 	 
+	 .container-all {
+		 width: 28%;
+		 margin-bottom: 40px;
+	 }
+	 
 	 #tiles a {
-		 width: 35rem;
+		 width: 100%;
 	 }
 	 
 	 #tiles-js a {
-		 width: 35rem;
+		 width: 100%;
 	 }
 	 
 	  .description-tile {
@@ -1390,16 +1432,21 @@ a, a:hover, a:visited, a:active {
  }
  
  @media (min-width: 1025px) and (max-width: 1220px) {
+	 
+	 body {
+		 overflow-x: hidden;
+	 }
+	 
 	 .container-all {
-		 width: 33rem;
+		 width: 28%;
 	 }
 	 
 	 #tiles a {
-		 width: 33rem;
+		 width: 100%;
 	 }
 	 
 	 #tiles-js a {
-		 width: 33rem;
+		 width: 100%;
 	 }
  }
  
@@ -1411,6 +1458,18 @@ a, a:hover, a:visited, a:active {
 	 
 	 #container-main {
 		 padding-top: 60px;
+	 }
+	 
+	 .container-all {
+		 width: 400px;
+	 }
+	 
+	 #tiles a {
+		 width: 400px;
+	 }
+	 
+	 #tiles-js a {
+		 width: 400px;
 	 }
  }
  
