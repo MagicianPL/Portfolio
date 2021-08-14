@@ -14,6 +14,7 @@ const colorFlipper = document.querySelector("#Color-Flipper"); /*divyAll.item(23
 const dice = document.querySelector("#Kostka"); /*divyAll.item(25);*/
 const magicBall = document.querySelector("#Magic-Ball");
 const stopwatch = document.querySelector("#stopwatch");
+const stickyNotes = document.querySelector("#sticky-notes");
 
 function showMenu() {
 	hamburgerMenu.style.display = "flex";	
@@ -44,12 +45,18 @@ vanillaJs.addEventListener("click", function(){
 		allA.item(4).style.display="flex";
 		allA.item(5).style.display="flex";
 		allA.item(6).style.display="flex";
+		allA.item(7).style.display="flex";
+		allA.item(8).style.display="flex";
+		allA.item(9).style.display="flex";
 		}
 		
 		else {
 		allA.item(4).style.display="none";
 		allA.item(5).style.display="none";
 		allA.item(6).style.display="none";
+		allA.item(7).style.display="none";
+		allA.item(8).style.display="none";
+		allA.item(9).style.display="none";
 		}
 	});
 	
@@ -155,16 +162,17 @@ window.addEventListener("scroll", function() {
 	
 	if (YToDo < window.innerHeight) {
 		toDo.classList.add("LeftToRight");
+		stickyNotes.classList.add("LeftToRight");
 	}
 	
 	if (YMagicBall < window.innerHeight) {
 		magicBall.classList.add("appearing-from-bottom");
-		colorFlipper.classList.add("appearing-from-bottom");
+		dice.classList.add("RightToLeft");
 	}
 	
 	if (YStopwatch < window.innerHeight) {
 		stopwatch.classList.add("RightToLeft");
-		dice.classList.add("RightToLeft");
+		colorFlipper.classList.add("appearing-from-bottom");
 	}
 	
 	if (YFooter < window.innerHeight) {

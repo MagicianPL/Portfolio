@@ -823,6 +823,25 @@ h2 {
 	opacity: 1;
 }
 
+#sticky-notes::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("notes.jpg");
+	background-size: cover;
+	opacity: 0.4;
+}
+
+#sticky-notes:hover::before {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	opacity: 1;
+}
+
+
 #Kostka::before {
 	content: "";
 	position: absolute;
