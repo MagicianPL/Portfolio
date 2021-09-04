@@ -989,11 +989,11 @@ a, a:hover, a:visited, a:active {
 		 text-align: center;
 		 line-height: 6rem;
 		 color: white;
-		 border: 1px solid red;
 		 position: absolute;
 		 top: 3rem;
 		 right: 3rem;
 		 border-radius: 50%;
+		 background-color: #2d0428;
 	 }
 	 
 	 #closing:hover {
