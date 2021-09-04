@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="" content="...">
+		 <link href="style.css" rel="stylesheet" >
+		 <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400&display=swap" rel="stylesheet">
+		<script src="script.js" defer></script>
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="hamburger-menu">
+			<span id="closing">X</span>
+			<div id="about-me"><a href="#main">O mnie</a></div>
+			<div id="moje-strony">Moje strony &#9660;
+				<a href="https://magicianpl.github.io/SpaceCoff" target="_blank">SpaceCoff</a>
+				<a href="https://magicianpl.github.io/Wyczesani" target="_blank">Wyczesani</a>
+				<a href="https://magicianpl.github.io/Inwestor" target="_blank">Inwestor</a>
+			</div>
+			<div id="vanilla-js">Vanilla JS &#9660;
+				<a href="https://magicianpl.github.io/Exchange" target="_blank">Exchange Rates</a>
+				<a href="https://magicianpl.github.io/MyToDoList" target="_blank">ToDo Lista</a>
+				<a href="https://magicianpl.github.io/MagicBall" target="_blank">Magiczna Bila</a>
+				<a href="https://magicianpl.github.io/Stopwatch" target="_blank">Stoper</a>
+				<a href="https://magicianpl.github.io/StickyNotes" target="_blank">Sticky Notes</a>
+				<a href="https://magicianpl.github.io/WalidatorRejestracji" target="_blank">Walidator Rejestracji</a>
+			</div>
+		</div>
+		<nav>
+			<img id="icon-hamburger" src="hamburger-icon.png">
+			<ul>
+				<li class="li-main"><a href="#main">O mnie</a></li>
+				<li class="li-main">Moje Strony &#9660;
+					<ol>
+						<li><a href="https://magicianpl.github.io/SpaceCoff" target="_blank">SpaceCoff</a></li>
+						<li><a href="https://magicianpl.github.io/Wyczesani" target="_blank">Wyczesani</a></li>
+						<li><a href="https://magicianpl.github.io/Inwestor" target="_blank">Inwestor</a></li>
+					</ol>
+				</li>
+				<li class="li-main">Vanilla JS &#9660;
+					<ol id="sub-two">
+						<li><a href="https://magicianpl.github.io/Exchange" target="_blank">Exchange Rates</a></li>
+						<li><a href="https://magicianpl.github.io/MyToDoList" target="_blank">ToDo Lista</a></li>
+						<li><a href="https://magicianpl.github.io/MagicBall" target="_blank">Magiczna Bila</a></li>
+						<li><a href="https://magicianpl.github.io/Stopwatch" target="_blank">Stoper</a></li>
+						<li><a href="https://magicianpl.github.io/StickyNotes" target="_blank">Sticky Notes</a></li>
+						<li><a href="https://magicianpl.github.io/WalidatorRejestracji" target="_blank">Walidator Rejestracji</a></li>
+					</ol>
+				</li>
+			</ul>
+		</nav>
+			<div id="container-main">
+			<main id="main">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#0099ff" fill-opacity="1" d="M0,288L80,272C160,256,320,224,480,176C640,128,800,64,960,53.3C1120,43,1280,85,1360,106.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+			</svg>
+			<img id="circle" src="circle.png"> <!-- Pojawia się tylko przy małych ekranach, zamiast dużego zdjęcia -->
+			<div id="svg-container">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="#0099ff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+				</svg>
+			</div> <!-- Wavy svg - góra i dół, pozycjonowane absolutnie-->
+			<img src="me.png">
+			<div id="description">
+				
+			<p>Cześć, jestem Michał i jestem początkującym front-endowcem.</p>
+			<p>Lubię kodować, kombinować, szukać rozwiązań i czasem przy tym nawet się wkurzać, ale kiedy wciskam ostatnie <strong>ctrl + s</strong> i projekt jest ukończony, to mam ochotę od razu brać się za kolejny!</p>
+			<p>Na chwilę obecną mój stack, to oczywiście <strong><i>HTML, CSS</i></strong> oraz <strong><i>JavaScript.</i></strong><br>
+			Znam także totalne podstawy <strong><i>Reacta</i></strong>, w którego wgłębiam się coraz bardziej. Pracuję także przy pomocy systemu kontroli wersji GIT.</p>
+			<p>Jestem także otwarty na nowe technologie!</p>
+			<p>Sprawdź, zobacz, oceń - będzie mi bardzo miło :)</p>
+			</div>
+			</main>
+			</div>
+		<div class="container-max-width"> <!-- Dodaję container z max width 1400px, żeby nie obracać głowy non stop na szerokich monitorach -->
+			<div id="sub-main">
+				<p>Mój Stack</p>
+				<div id="vertical-divider"></div>
+				<div id="logo">
+					<img src="htmlnew.png" alt="logo html">
+					<img src="cssnew.png" alt="logo css">
+					<img src="jsnew.png" alt="logo javascript">
+				</div>
+				<div id="animations">
+					<p>Żeby wszystko umieścić</p>
+					<p>Żeby całość ostylować</p>
+					<p>Żeby było interaktywnie</p>
+				</div>
+				<div>
+					<p>Zanim zacznę z innymi językami (może kiedyś fullstack?), chciałbym móc dosyć sprawnie poruszać się w bibliotece React (cały czas się jej uczę) oraz zostać Juniorem. Myślę że wtedy da mi to jeszcze większe możliwości rozwoju!</p>
+					<p>W międzyczasie miło byłoby też oswoić LESSa albo SASSa.</p>
+				</div>
+			</div>
+			<h2>Oceń moje strony:</h2>
+			
+			
+			<div id="tiles">
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/SpaceCoff/" target="_blank">
+					<div id="Space-Coff">
+						<div>SpaceCoff</div>
+					</div>
+					</a>
+					<div class="description-tile">Pierwsza strona, którą stworzyłem.<br>Pomysł "kawy z kosmosu" wydał mi się ciekawy ;)</div>
+				</div>
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/Wyczesani" target="_blank">
+					<div id="Wyczesani">
+						<div>Wyczesani</div>
+					</div>
+					</a>
+					<div class="description-tile">Strona, która ma zaprezentować Salon Fryzjerski.<br>Kliknij w miniaturkę i sprawdź!</div>
+				</div>
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/Inwestor" target="_blank">
+					<div id="Inwestor">
+						<div>Inwestor</div>
+					</div>
+					</a>
+					<div class="description-tile">Inwestor powstał, kiedy postawiłem pierwszy mały krok w JavaScripcie. Moje pierwsze zetknięcie się z ingerencją w model DOM dynamicznie. Mega zmotywowało mnie do dalszej nauki!</div>
+				</div>
+				<div class="bg-tiles"></div>
+			</div>
+			
+			<h2>JS w roli głównej:</h2>
+			<div id="tiles-js">
+			
+			<div class="container-all">
+					<a href="https://magicianpl.github.io/Exchange" target="_blank">
+					<div id="exchange-rates">
+						<div>Exchange Rates</div>
+					</div>
+					</a>
+					<div class="description-tile">Przelicznik walut - dane pobierane są dynamicznie z zewnętrznego API</div>
+				</div>
+			
+				<div class="container-all">
+					<a href="http://magicianpl.github.io/MyToDoList/" target="_blank">
+					<div id="ToDo">
+						<div>To-Do Lista</div>
+					</div>
+					</a>
+					<div class="description-tile">Nieco bardziej zaawansowana To-Do Lista z kilkoma polami i możliwością edycji zadań. Przyswoiłem sobie podstawy walidacji formularza. Ponadto, każde tło dodanego zadania jest wybierane losowo.</div>
+				</div>
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/MagicBall/" target="_blank">
+					<div id="Magic-Ball">
+						<div>Magiczna Bila</div>
+					</div>
+					</a>
+					<div class="description-tile">Wejdź, zadaj pytanie i poznaj odpowiedź!</div>
+				</div>
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/Stopwatch" target="_blank">
+					<div id="stopwatch">
+						<div>Stoper</div>
+					</div>
+					</a>
+					<div class="description-tile">Stoper z możliwością zmiany koloru</div>
+				</div>
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/StickyNotes/" target="_blank">
+					<div id="sticky-notes">
+						<div>Sticky Notes</div>
+					</div>
+					</a>
+					<div class="description-tile">Przyklej własną notatkę!</div>
+				</div>
+				
+				
+				<div class="container-all">
+					<a href="https://magicianpl.github.io/WalidatorRejestracji" target="_blank">
+					<div id="checking-form">
+						<div>Walidator Rejestracji</div>
+					</div>
+					</a>
+					<div class="description-tile">Walidator Rejestracji - wejdź i sprawdź!</div>
+				</div>
+				
+				<div class="bg-tiles second-bg"></div>
+			</div>
+		</div>
+		
+		<footer>
+			Moje sociale: <a href="https://github.com/MagicianPL" target="_blank"><img src="github.png"></a> <a href="https://www.facebook.com/sukowskimichal/" target="_blank"><img src="fb.png"></a>
+		</footer> 
+	</body>
+	
+	
+	
+	<!-- <img src="github.png"> <img src="fb.png"> -->
