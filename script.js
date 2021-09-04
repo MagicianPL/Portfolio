@@ -11,9 +11,9 @@ const divRight = document.querySelector("#Inwestor");
 const divCenter = document.querySelector("#Wyczesani");
 
 //variables - all tiles in main js tiles div
+const exchangeRates = document.querySelector("#exchange-rates")
 const toDo = document.querySelector("#ToDo");
-const colorFlipper = document.querySelector("#Color-Flipper");
-const dice = document.querySelector("#Kostka");
+const checkingForm = document.querySelector("#checking-form");
 const magicBall = document.querySelector("#Magic-Ball");
 const stopwatch = document.querySelector("#stopwatch");
 const stickyNotes = document.querySelector("#sticky-notes");
@@ -105,28 +105,28 @@ const showSiteTiles = () => {
 
 //Appearing js tiles in js main div
 const showJsTiles = () => {
+	const dataExchangeRates = exchangeRates.getBoundingClientRect();
+	const yExchangeRates = dataExchangeRates.top + dataExchangeRates.height/2;
 	const dataToDo = toDo.getBoundingClientRect();
 	const yToDo = dataToDo.top + dataToDo.height/2;
 	const dataMagicBall = magicBall.getBoundingClientRect();
 	const yMagicBall = dataMagicBall.top + dataMagicBall.height/2;
 	const dataStopwatch = stopwatch.getBoundingClientRect();
 	const yStopwatch = dataStopwatch.top + dataStopwatch.height/2;
-	const dataDice = dice.getBoundingClientRect();
-	const yDice = dataDice.top + dataDice.height/2;
+	
+	if (yExchangeRates < window.innerHeight) {
+		exchangeRates.classList.add("LeftToRight");
+		stopwatch.classList.add("LeftToRight");
+	}
 	
 	if (yToDo < window.innerHeight) {
-		toDo.classList.add("LeftToRight");
-		stickyNotes.classList.add("LeftToRight");
+		ToDo.classList.add("appearing-from-bottom");
+		stickyNotes.classList.add("appearing-from-bottom");
 	}
 	
 	if (yMagicBall < window.innerHeight) {
-		magicBall.classList.add("appearing-from-bottom");
-		dice.classList.add("appearing-from-bottom");
-	}
-	
-	if (yStopwatch < window.innerHeight) {
-		stopwatch.classList.add("RightToLeft");
-		colorFlipper.classList.add("RightToLeft");
+		magicBall.classList.add("RightToLeft");
+		checkingForm.classList.add("RightToLeft");
 }
 };
 
