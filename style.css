@@ -599,14 +599,17 @@ h2 {
 	opacity: 1;
 }
 
-#tiles a > div > div {
+.title {
 	width: 100%;
-	height: 8rem;
+	min-height: 8rem;
 	background-color: grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-size: 4rem;
 	font-weight: bold;
-	text-align: center;
-	line-height: 8rem;
+	/*text-align: center;
+	line-height: 8rem;*/
 	z-index: 10;
 	opacity: 0.8;
 }
@@ -861,17 +864,6 @@ h2 {
 	opacity: 1;
 }
 
-#tiles-js a > div > div {
-	width: 100%;
-	height: 8rem;
-	background-color: grey;
-	font-size: 4rem;
-	font-weight: bold;
-	text-align: center;
-	line-height: 8rem;
-	z-index: 10;
-	opacity: 0.8;
-}
 
 #tiles-js a > div:hover {
 	/*border: 2px solid #4d0045;*/
@@ -1143,10 +1135,9 @@ a, a:hover, a:visited, a:active {
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles a > div > div {
-		 height: 15rem;
+	 .title {
+		 min-height: 15rem;
 		 font-size: 7rem;
-		 line-height: 15rem;
 	 }
 	 
 	 #tiles-js {
@@ -1165,11 +1156,6 @@ a, a:hover, a:visited, a:active {
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js a > div > div {
-		 min-height: 15rem;
-		 font-size: 7rem;
-		 line-height: 15rem;
-	 }
 	 
 	 .description-tile {
 		 display: none;
@@ -1375,10 +1361,9 @@ a, a:hover, a:visited, a:active {
 		 margin-bottom: 5rem;
 	 }
 	 
-	 #tiles a > div > div {
-		 height: 15rem;
+	.title {
+		 min-height: 15rem;
 		 font-size: 7rem;
-		 line-height: 15rem;
 	 }
 	 
 	 #tiles-js {
@@ -1397,11 +1382,6 @@ a, a:hover, a:visited, a:active {
 		 margin-bottom: 5rem;
 	 }
 	 
-	  #tiles-js a > div > div {
-		 height: 15rem;
-		 font-size: 7rem;
-		 line-height: 15rem;
-	 }
 	 
 	 .description-tile {
 		 display: none;
