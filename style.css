@@ -1166,7 +1166,7 @@ a, a:hover, a:visited, a:active {
 	 }
 	 
 	  #tiles-js a > div > div {
-		 height: 15rem;
+		 min-height: 15rem;
 		 font-size: 7rem;
 		 line-height: 15rem;
 	 }
