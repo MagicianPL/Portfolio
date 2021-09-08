@@ -18,6 +18,9 @@ const magicBall = document.querySelector("#Magic-Ball");
 const stopwatch = document.querySelector("#stopwatch");
 const stickyNotes = document.querySelector("#sticky-notes");
 
+//react tiles
+const bankApplication = document.querySelector("#bank-application");
+
 const tiles = document.querySelector("#tiles");
 const tilesJs = document.querySelector("#tiles-js");
 const h2 = document.querySelector("h2"); //this is h2 in tiles (sites tiles)
@@ -122,6 +125,7 @@ const showJsTiles = () => {
 	if (yToDo < window.innerHeight) {
 		ToDo.classList.add("appearing-from-bottom");
 		stickyNotes.classList.add("appearing-from-bottom");
+		bankApplication.classList.add("appearing-from-bottom");
 	}
 	
 	if (yMagicBall < window.innerHeight) {
@@ -193,6 +197,7 @@ vanillaJs.addEventListener("click", function(){
 		allA.item(7).style.display="flex";
 		allA.item(8).style.display="flex";
 		allA.item(9).style.display="flex";
+		allA.item(10).style.display="flex";
 		} else {
 		allA.item(4).style.display="none";
 		allA.item(5).style.display="none";
@@ -200,6 +205,7 @@ vanillaJs.addEventListener("click", function(){
 		allA.item(7).style.display="none";
 		allA.item(8).style.display="none";
 		allA.item(9).style.display="none";
+		allA.item(10).style.display="none";
 		};
 	});
 	
