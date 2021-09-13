@@ -23,6 +23,7 @@ nav > img {
 	display: none;
 }
 
+
 #hamburger-menu {
 	display: none;
 }
@@ -38,7 +39,7 @@ nav {
 	background-color: #4d0045;
 	display: flex;
 	position: fixed;
-	z-index: 9999;
+	z-index: 9998;
 	opacity: 1;
 }
 
@@ -102,7 +103,7 @@ ol {
 
 ul > li:nth-child(2):hover > ol {
 	display: block;
-	z-index: 9999;
+	z-index: 9998;
 }
 
 ol > li {
@@ -1017,6 +1018,7 @@ a, a:hover, a:visited, a:active {
 		 cursor: pointer;
 	 }
 	 
+	 
 	 #hamburger-menu {
 		 width: 100%;
 		 min-height: 100vh;
@@ -1026,12 +1028,22 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 		 background-color: #4d0045;
 		 opacity: 0;
-		 position: fixed;
-		 z-index: 10000;
-		 display: none;
+		 position: absolute;
+		 padding-bottom: 40px;
+		 z-index: 9999;
 		 animation: appearing-hamb;
 		 animation-duration: 1s;
 		 animation-fill-mode: forwards;
+	 }
+	 
+	 .hamb-container {
+		 width: 100%;
+		 min-height: 100vh;
+		 position: fixed;
+		 overflow-y: auto;
+		 overflow-x: hidden;
+		 z-index: 9999;
+		 display: none;
 	 }
 	 
 	 @keyframes appearing-hamb {
@@ -1262,12 +1274,22 @@ a, a:hover, a:visited, a:active {
 		 align-items: center;
 		 background-color: #4d0045;
 		 opacity: 0;
-		 position: fixed;
-		 z-index: 10000;
-		 display: none;
+		 position: absolute;
+		 z-index: 9999;
+		 padding-bottom: 40px;
 		 animation: appearing-hamb;
 		 animation-duration: 1s;
 		 animation-fill-mode: forwards;
+	 }
+	 
+	 .hamb-container {
+		 width: 100%;
+		 min-height: 100vh;
+		 position: fixed;
+		 overflow-y: auto;
+		 overflow-x: hidden;
+		 z-index: 9999;
+		 display: none;
 	 }
 	 
 	 @keyframes appearing-hamb {
@@ -1283,11 +1305,11 @@ a, a:hover, a:visited, a:active {
 		 text-align: center;
 		 line-height: 6rem;
 		 color: white;
-		 border: 1px solid red;
 		 position: absolute;
 		 top: 3rem;
 		 right: 3rem;
 		 border-radius: 50%;
+		 background-color: #2d0428;
 	 }
 	 
 	 #closing:hover {

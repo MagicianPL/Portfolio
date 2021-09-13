@@ -2,7 +2,7 @@ const nav = document.querySelector("nav");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
 const allDivs = document.querySelectorAll("div");
-const descriptionTwo = allDivs[12];
+const descriptionTwo = allDivs[13];
 const body = document.querySelector("body");
 
 //three variables - three tiles in main site tiles div
@@ -30,7 +30,7 @@ const footer = document.querySelector("footer");
 
 //and all stuff about hamburger case on mobiles or tablets
 const hamburgerIcon = document.getElementById("icon-hamburger");
-const hamburgerMenu = document.getElementById("hamburger-menu");
+const hamburgerMenuContainer = document.querySelector(".hamb-container");
 const xClosing = document.getElementById("closing");
 const oMnie = document.getElementById("about-me");
 const mojeStrony = document.getElementById("moje-strony");
@@ -166,7 +166,7 @@ const mainTriggerScrolling = () => {
 
 //all about hamburger menu
 function showHambMenu() {
-	hamburgerMenu.style.display = "flex";	
+	hamburgerMenuContainer.style.display = "flex";	
 };
 
 window.addEventListener("scroll", mainTriggerScrolling);
@@ -174,7 +174,7 @@ window.addEventListener("scroll", mainTriggerScrolling);
 hamburgerIcon.addEventListener("click", showHambMenu);
 
 oMnie.addEventListener("click", function(){
-		hamburgerMenu.style.display = "none";
+		hamburgerMenuContainer.style.display = "none";
 	}); //because it's anchor for section about me, so I'm closing menu
 
 mojeStrony.addEventListener("click", function(){
@@ -210,5 +210,5 @@ vanillaJs.addEventListener("click", function(){
 	});
 	
 xClosing.addEventListener("click", function(){
-		hamburgerMenu.style.display = "none";
+		hamburgerMenuContainer.style.display = "none";
 	});
