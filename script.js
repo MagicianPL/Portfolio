@@ -2,7 +2,7 @@ const nav = document.querySelector("nav");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
 const allDivs = document.querySelectorAll("div");
-const descriptionTwo = allDivs[13];
+const descriptionTwo = allDivs[14];
 const body = document.querySelector("body");
 
 //three variables - three tiles in main site tiles div
@@ -35,6 +35,7 @@ const xClosing = document.getElementById("closing");
 const oMnie = document.getElementById("about-me");
 const mojeStrony = document.getElementById("moje-strony");
 const vanillaJs = document.getElementById("vanilla-js");
+const reactApps = document.querySelector("#react");
 const allA = document.getElementsByTagName("a");
 
 
@@ -197,7 +198,6 @@ vanillaJs.addEventListener("click", function(){
 		allA.item(7).style.display="flex";
 		allA.item(8).style.display="flex";
 		allA.item(9).style.display="flex";
-		allA.item(10).style.display="flex";
 		} else {
 		allA.item(4).style.display="none";
 		allA.item(5).style.display="none";
@@ -205,9 +205,16 @@ vanillaJs.addEventListener("click", function(){
 		allA.item(7).style.display="none";
 		allA.item(8).style.display="none";
 		allA.item(9).style.display="none";
-		allA.item(10).style.display="none";
 		};
 	});
+	
+reactApps.addEventListener("click", ()=> {
+	if (allA[10].style.display === "none") {
+		allA[10].style.display = "flex";
+	} else {
+		allA[10].style.display = "none";
+	}
+});
 	
 xClosing.addEventListener("click", function(){
 		hamburgerMenuContainer.style.display = "none";
