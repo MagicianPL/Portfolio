@@ -665,6 +665,29 @@ h2 {
 	transform: translateY(0);
 }
 
+.visible-desc {
+	transform: translateY(0);
+	visibility: visible;
+	width: 70%;
+	font-weight: 600;
+}
+
+@media (max-width: 1220px) {
+	.visible-desc {
+		width: 100%;
+	}
+}
+
+.visible-desc ul {
+	margin-top: 10px;
+	margin-bottom: 25px;
+	list-style-type: square;
+}
+
+.visible-desc li {
+	margin-bottom: 5px;
+}
+
 @keyframes animation-span {
 	40% {
 		transform: translateX(-200px);
@@ -890,7 +913,7 @@ h2 {
 	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
-	margin-bottom: 1rem;
+	margin-bottom: 6rem;
 	justify-content: space-around;
 	position: relative;
 	padding: 10rem 0 3rem 0;
@@ -1269,6 +1292,10 @@ a, a:hover, a:visited, a:active {
 	 .description-tile {
 		 display: none;
 	 }
+	 
+	 #tiles-react .description-tile {
+		 display: flex;
+	 }
  }
  
  @media (min-width: 481px) and (max-width: 768px) {
@@ -1523,6 +1550,10 @@ a, a:hover, a:visited, a:active {
 	 .description-tile {
 		 display: none;
 	 }
+	 
+	 #tiles-react .description-tile {
+		 display: flex;
+	 }
  }
  
  @media (min-width: 769px) and (max-width: 1024px) {
@@ -1578,6 +1609,10 @@ a, a:hover, a:visited, a:active {
 
 	  .description-tile {
 		 display: none;
+	 }
+	 
+	 #tiles-react .description-tile {
+		 display: flex;
 	 }
  }
  
