@@ -913,7 +913,6 @@ h2 {
 	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
-	margin-bottom: 6rem;
 	justify-content: space-around;
 	position: relative;
 	padding: 10rem 0 3rem 0;
@@ -959,6 +958,7 @@ h2 {
 	left: 0;
 	background-image: url("bank.jpg");
 	background-size: cover;
+	background-position: center;
 	opacity: 0.4;
 }
 
@@ -969,7 +969,7 @@ h2 {
 }
 
 .third-bg {
-	background-image: url("react.jpg");
+	background-image: url("react.png");
 	opacity: 0.5;
 }
 
