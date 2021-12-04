@@ -359,90 +359,27 @@ main:hover::before {
 	margin-bottom: 9rem;
 }
 
-#sub-main > p:nth-child(1) {
-	font-size: 2.4rem;
-	letter-spacing: 3px;
-	writing-mode: vertical-lr;
-	transform: rotate(180deg);
-	justify-content: center;
-	display: flex;
-	letter-spacing: 8px;
-	word-spacing: 2rem;
-	font-weight: bold;
-}
-
-#vertical-divider {
-	width: 1rem;
-	height: 40rem;
-	background-color: #4d0045;
-	clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
-	margin-left: 1rem;
-	margin-right: 1.5rem;
-}
-
-#logo {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin-right: 4rem;
-}
-
-#logo img {
-	height: 12rem;
-	display: block;
-}
-
-#logo img:hover {
-	transform: translateY(5px);
-	transition: 1s;
-}
-
-#animations {
-	font-size: 2.4rem;
-	font-weight: bold;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 70rem;
-}
-
-#animations > p:nth-child(1) {
-	opacity: 0;
-	animation: sentences;
-	animation-delay: 2s;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-}
-
-#animations > p:nth-child(2) {
-	opacity: 0;
-	animation: sentences;
-	animation-delay: 2.75s;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-}
-
-#animations > p:nth-child(3) {
-	opacity: 0;
-	animation: sentences;
-	animation-delay: 3.5s;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-}
-
-#sub-main > div:last-child {
+.tech-logo {
 	width: 100%;
-	font-size: 2.4rem;
-	padding: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	-webkit-box-shadow: inset 0px 0px 12px -3px #80080; 
-	/*box-shadow: inset 0px 0px 12px -3px #800080;*/
-	visibility: hidden;
+	max-width: 120px;
 }
+
+.sass {
+	max-width: 150px;
+}
+
+.tailwind {
+	max-width: 170px
+}
+
+.react {
+	max-width: 150px;
+}
+
+.tech-logo img {
+	width: 100%;
+}
+
 
 .appearing-from-bottom {
 	animation: appearing-from-bottom;
@@ -458,34 +395,11 @@ main:hover::before {
 	
 	100% {
 		transform: none;
-		opacity 1;
+		opacity: 1;
 		visibility: visible;
 	}
 }
 
-#sub-main > div:last-child > p {
-	margin-bottom: 4rem;
-	text-align: center;
-	color: #4d0045;
-}
-
-@keyframes sentences {
-	59.9% {
-		opacity: 0;
-	}
-	
-	60% {
-		opacity: 1;
-	}
-	
-	95% {
-		opacity: 0;
-	}
-	
-	100% {
-		opacity: 0;
-	}
-}
 
 h2 {
 	font-size: 4.2rem;
