@@ -410,6 +410,15 @@ h1::before {
 	width: 100%;
 }
 
+.desc-two {
+	font-size: 3rem;
+	color: #4d0045;
+	text-align: left;
+	width: 100%;
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
 
 .appearing-from-bottom {
 	animation: appearing-from-bottom;
@@ -1508,9 +1517,6 @@ a, a:hover, a:visited, a:active {
 	 
 	 main img {
 		 max-width: 40%;
-	 }
-	 
-	 main {
 	 }
 	 
 	 #description {
