@@ -3,6 +3,9 @@ const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
 const allDivs = document.querySelectorAll("div");
 
+//Technologies header
+const techHeader = document.querySelector(".technologies");
+
 /* logos on technology section */
 const techLogos = document.querySelectorAll(".tech-logo");
 const logoSection = document.querySelector("#logo-section");
@@ -77,11 +80,22 @@ const blurDescription = () => {
   }
 };
 
+//For sliding Technologies header
+const showTechnologiesHeader = () => {
+  const techHeaderY =
+    techHeader.getBoundingClientRect().top +
+    techHeader.getBoundingClientRect().height / 10;
+
+  if (techHeaderY < window.innerHeight) {
+    techHeader.classList.add("slide-from-left");
+  }
+};
+
 //For showing logos on tech section
 const showStack = () => {
   const logoSectionY =
     logoSection.getBoundingClientRect().top +
-    logoSection.getBoundingClientRect().height / 5;
+    logoSection.getBoundingClientRect().height / 8;
 
   console.log(logoSectionY);
   if (logoSectionY < window.innerHeight) {
@@ -165,6 +179,7 @@ const showFooter = () => {
 const mainTriggerScrolling = () => {
   navOpacity();
   blurDescription();
+  showTechnologiesHeader();
   showStack();
   showSiteTiles();
   showJsTiles();
