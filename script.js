@@ -1,3 +1,21 @@
+const tileContainer = document.querySelectorAll(".tile-container");
+const reactTiles = document.querySelectorAll(".react-tile");
+const reactDescriptions = document.querySelectorAll(".react-desc");
+
+const showReactTiles = () => {
+  for (i = 0; i < tileContainer.length; i++) {
+    const tileContainerY =
+      tileContainer[i].getBoundingClientRect().top +
+      tileContainer[i].getBoundingClientRect().height / 2;
+    console.log(tileContainerY);
+    if (tileContainerY < window.innerHeight) {
+      console.log("Mnieeeeejsza");
+      reactTiles[i].classList.add("show-react-data");
+      reactDescriptions[i].classList.add("show-react-data");
+    }
+  }
+};
+
 const nav = document.querySelector("nav");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
@@ -184,6 +202,7 @@ const mainTriggerScrolling = () => {
   showSiteTiles();
   showJsTiles();
   translateTilesDiv();
+  showReactTiles();
   showFooter();
 };
 

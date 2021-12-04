@@ -928,20 +928,28 @@ h2 {
 	max-width: 1200px;
 	display: flex;
 	align-items: center;
-	border: 2px solid red;
 	margin-bottom: 25px;
+}
+
+@media (max-width: 1250px) {
+	.tile-container {
+		flex-direction: column;
+		gap: 15px;
+	}
 }
 
 .react-tile {
 	width: 100%;
 	max-width: 600px;
 	height: 300px;
-	border: 2px solid blue;
 	position: relative;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 	cursor: pointer;
+	visibility: hidden;
+	transform: translateX(-100px);
+	transition: all 1s;
 }
 
 .react-tile::before {
@@ -955,6 +963,7 @@ h2 {
 	opacity: 0.4;
 }
 
+
 .react-desc {
 	flex: 1;
 	font-size: 28px;
@@ -963,6 +972,20 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	padding: 0 15px 0 40px;
+	visibility: hidden;
+	transform: translateX(100px);
+	transition: all 1s;
+}
+
+@media (max-width: 1250px) {
+	.react-desc {
+		text-align: center;
+	}
+}
+
+.show-react-data {
+	visibility: visible;
+	transform: translateX(0);
 }
 
 .countries::before {
