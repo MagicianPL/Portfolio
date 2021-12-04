@@ -146,8 +146,8 @@ const showJsTiles = () => {
   if (yToDo < window.innerHeight) {
     ToDo.classList.add("appearing-from-bottom");
     stickyNotes.classList.add("appearing-from-bottom");
-    bankApplication.classList.add("appearing-from-bottom");
-    countriesApplication.classList.add("appearing-from-bottom");
+    /*bankApplication.classList.add("appearing-from-bottom");
+    countriesApplication.classList.add("appearing-from-bottom");*/
   }
 
   if (yMagicBall < window.innerHeight) {

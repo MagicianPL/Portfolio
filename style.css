@@ -915,88 +915,71 @@ h2 {
 
 #tiles-react {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
 	width: 100%;
-	margin: 0 auto;
 	position: relative;
 	padding: 10rem 0 1.5rem 0;
 }
 
-@media (max-width: 768px) {
-	#tiles-react {
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
-#tiles-react a:hover + .description-tile {
-	visibility: visible;
-	transform: translateY(0);
-	transition: transform 1s;
-	transition-delay: 0.2s;
-}
-
-#tiles-react a {
+.tile-container {
 	width: 100%;
-}
-
-#tiles-react .container-all {
-	width: 40rem;
-	margin-bottom: 20px;
-}
-
-#tiles-react a > div {
-	width: 100%;
-	height: 30rem;
-	position: relative;
-	overflow: hidden;
+	min-height: 200px;
+	max-width: 1200px;
 	display: flex;
 	align-items: center;
+	border: 2px solid red;
+	margin-bottom: 25px;
+}
+
+.react-tile {
+	width: 100%;
+	max-width: 600px;
+	height: 300px;
+	border: 2px solid blue;
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
 	cursor: pointer;
-	visibility: hidden;
-	background-color: white;
-	z-index: 10;
-	animation-delay: 0.7s;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-#tiles-react .description-tile {
-	max-height: none;
-}
-
-#bank-application::before {
+.react-tile::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("assets/bank.jpg");
 	background-size: cover;
-	background-position: center;
 	opacity: 0.4;
 }
 
-#bank-application:hover::before {
-	transform: scale(1.2);
-	transition-duration: 0.5s;
-	opacity: 1;
+.react-desc {
+	flex: 1;
+	font-size: 28px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px 0 40px;
 }
 
-#countries::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+.countries::before {
 	background-image: url("assets/countries.jpg");
-	background-size: cover;
-	background-position: center;
-	opacity: 0.4;
 }
 
-#countries:hover::before {
+.react-desc ul {
+	width: 100%;
+	margin-top: 18px;
+	list-style: none;
+}
+
+.bank-app::before {
+	background-image: url("assets/bank.jpg");
+}
+
+.react-tile:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 1;
