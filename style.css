@@ -916,10 +916,11 @@ h2 {
 
 #tiles-react {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	min-height: 30rem;
 	margin: 0 auto;
-	justify-content: space-around;
+	align-items: center;
 	position: relative;
 	padding: 10rem 0 3rem 0;
 }
@@ -969,6 +970,25 @@ h2 {
 }
 
 #bank-application:hover::before {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	opacity: 1;
+}
+
+#countries::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("assets/countries.jpg");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+}
+
+#countries:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 1;

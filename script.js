@@ -27,6 +27,7 @@ const stickyNotes = document.querySelector("#sticky-notes");
 
 //react tiles
 const bankApplication = document.querySelector("#bank-application");
+const countriesApplication = document.querySelector("#countries");
 
 const tiles = document.querySelector("#tiles");
 const tilesJs = document.querySelector("#tiles-js");
@@ -97,10 +98,8 @@ const showStack = () => {
     logoSection.getBoundingClientRect().top +
     logoSection.getBoundingClientRect().height / 8;
 
-  console.log(logoSectionY);
   if (logoSectionY < window.innerHeight) {
     for (i = 0; i < techLogos.length; i++) {
-      console.log(i);
       techLogos[i].style.opacity = "1";
     }
   }
@@ -148,6 +147,7 @@ const showJsTiles = () => {
     ToDo.classList.add("appearing-from-bottom");
     stickyNotes.classList.add("appearing-from-bottom");
     bankApplication.classList.add("appearing-from-bottom");
+    countriesApplication.classList.add("appearing-from-bottom");
   }
 
   if (yMagicBall < window.innerHeight) {
