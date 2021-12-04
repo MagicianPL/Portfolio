@@ -406,6 +406,10 @@ h1::before {
 	max-width: 150px;
 }
 
+.git {
+	grid-column: 1/-1;
+}
+
 .tech-logo img {
 	width: 100%;
 }
@@ -417,6 +421,10 @@ h1::before {
 	width: 100%;
 	max-width: 1000px;
 	margin: 20px auto;
+}
+
+.desc-two p:last-child {
+	margin-top: 20px;
 }
 
 
