@@ -601,19 +601,19 @@ h2 {
 	opacity: 1;
 }
 
-#Inwestor::before {
+#Celebrytka::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("assets/inwestor.jpg");
+	background-image: url("assets/celebrytka.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
 
-#Inwestor:hover::before {
+#Celebrytka:hover::before {
 	transform: scale(1.2);
 	transition-duration: 0.5s;
 	opacity: 1;

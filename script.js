@@ -13,9 +13,9 @@ const logoSection = document.querySelector("#logo-section");
 const body = document.querySelector("body");
 
 //three variables - three tiles in main site tiles div
-const divLeft = document.querySelector("#Space-Coff");
-const divRight = document.querySelector("#Inwestor");
-const divCenter = document.querySelector("#Wyczesani");
+const divLeft = document.querySelector("#Celebrytka");
+const divRight = document.querySelector("#Wyczesani");
+const divCenter = document.querySelector("#Space-Coff");
 
 //variables - all tiles in main js tiles div
 const exchangeRates = document.querySelector("#exchange-rates");
