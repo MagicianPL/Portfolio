@@ -38,13 +38,38 @@ const footer = document.querySelector("footer");
 
 //and all stuff about hamburger case on mobiles or tablets
 const hamburgerIcon = document.getElementById("icon-hamburger");
-const hamburgerMenuContainer = document.querySelector(".hamb-container");
-const xClosing = document.getElementById("closing");
-const oMnie = document.getElementById("about-me");
-const mojeStrony = document.getElementById("moje-strony");
-const vanillaJs = document.getElementById("vanilla-js");
-const reactApps = document.querySelector("#react");
-const allA = document.getElementsByTagName("a");
+const myPages = document.querySelector(".hamb-my-pages");
+const myPagesOptions = document.querySelector(".hamb-pages-options");
+const vanillaJs = document.querySelector(".hamb-vanilla-js");
+const vanillaJsOptions = document.querySelector(".hamb-js-options");
+const reactHamb = document.querySelector(".hamb-react");
+const reactHambOptions = document.querySelector(".hamb-react-options");
+
+myPages.addEventListener("click", () => {
+  if (myPagesOptions.style.display === "block") {
+    myPagesOptions.style.display = "none";
+  } else {
+    myPagesOptions.style.display = "block";
+  }
+});
+
+vanillaJs.addEventListener("click", () => {
+  if (vanillaJsOptions.style.display === "block") {
+    vanillaJsOptions.style.display = "none";
+  } else {
+    vanillaJsOptions.style.display = "block";
+  }
+});
+
+reactHamb.addEventListener("click", () => {
+  if (reactHambOptions.style.display === "block") {
+    reactHambOptions.style.display = "none";
+  } else {
+    reactHambOptions.style.display = "block";
+  }
+});
+
+/****************************************************************** */
 
 /*This function will add opacity to nav when site is scrolled for height of nav.
 Function will be triggered in main function, where I have every functions thas requires trigger by scrolling*/
@@ -199,58 +224,3 @@ const mainTriggerScrolling = () => {
   showReactTiles();
   showFooter();
 };
-
-//all about hamburger menu
-function showHambMenu() {
-  hamburgerMenuContainer.style.display = "flex";
-}
-
-window.addEventListener("scroll", mainTriggerScrolling);
-
-hamburgerIcon.addEventListener("click", showHambMenu);
-
-oMnie.addEventListener("click", function () {
-  hamburgerMenuContainer.style.display = "none";
-}); //because it's anchor for section about me, so I'm closing menu
-
-mojeStrony.addEventListener("click", function () {
-  if (allA.item(1).style.display == "none") {
-    allA.item(1).style.display = "flex";
-    allA.item(2).style.display = "flex";
-    allA.item(3).style.display = "flex";
-  } else {
-    allA.item(1).style.display = "none";
-    allA.item(2).style.display = "none";
-    allA.item(3).style.display = "none";
-  }
-});
-
-vanillaJs.addEventListener("click", function () {
-  if (allA.item(4).style.display == "none") {
-    allA.item(4).style.display = "flex";
-    allA.item(5).style.display = "flex";
-    allA.item(6).style.display = "flex";
-    allA.item(7).style.display = "flex";
-    allA.item(8).style.display = "flex";
-    allA.item(9).style.display = "flex";
-  } else {
-    allA.item(4).style.display = "none";
-    allA.item(5).style.display = "none";
-    allA.item(6).style.display = "none";
-    allA.item(7).style.display = "none";
-    allA.item(8).style.display = "none";
-    allA.item(9).style.display = "none";
-  }
-});
-
-reactApps.addEventListener("click", () => {
-  if (allA[10].style.display === "none") {
-    allA[10].style.display = "flex";
-  } else {
-    allA[10].style.display = "none";
-  }
-});
-
-xClosing.addEventListener("click", function () {
-  hamburgerMenuContainer.style.display = "none";
-});

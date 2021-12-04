@@ -1102,112 +1102,53 @@ a, a:hover, a:visited, a:active {
 		 cursor: pointer;
 	 }
 	 
-	 
-	 #hamburger-menu {
+	 .nav-overlay {
+		 position: fixed;
 		 width: 100%;
-		 min-height: 100vh;
+		 height: 100vh;
+		 background: #4d0045;
+		 z-index: 9999;
+		 opacity: 0.95;
+	 }
+
+	 .hamb-nav {
+		color: white;
+		font-size: 5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	 }
+
+	 .hamb-nav ul {
+		 list-style: none;
+	 }
+
+	 .hamb-nav li {
 		 display: flex;
 		 flex-direction: column;
-		 justify-content: center;
 		 align-items: center;
-		 background-color: #4d0045;
-		 opacity: 0;
-		 position: absolute;
-		 padding-bottom: 40px;
-		 z-index: 9999;
-		 animation: appearing-hamb;
-		 animation-duration: 1s;
-		 animation-fill-mode: forwards;
 	 }
-	 
-	 .hamb-container {
-		 width: 100%;
-		 min-height: 100vh;
-		 position: fixed;
-		 overflow-y: auto;
-		 overflow-x: hidden;
-		 z-index: 9999;
+
+	 .hamb-nav > ul {
+		 display: flex;
+		 flex-direction: column;
+		 list-style: none;
+		 align-items: center;
+		 font-size: 6rem;
+		 gap: 10rem;
+	 }
+
+	 .hamb-pages-options, .hamb-js-options, .hamb-react-options {
+		 margin-top: 10px;
 		 display: none;
 	 }
-	 
-	 @keyframes appearing-hamb {
-		 100% {
-			 opacity: 0.95;
-		 }
-	 }
-	 
-	 #closing {
-		 font-size: 5rem;
-		 width: 6rem;
-		 height: 6rem;
-		 text-align: center;
-		 line-height: 6rem;
-		 color: white;
-		 position: absolute;
-		 top: 3rem;
-		 right: 3rem;
-		 border-radius: 50%;
-		 background-color: #2d0428;
-	 }
-	 
-	 #closing:hover {
-		 opacity: 0.7;
-	 }
-	 
-	 #hamburger-menu > div {
-		 display: flex;
-		 justify-content: center;
-		 align-items: center;
-		 font-size: 5rem;
-		 min-height: 20rem;
-		 color: white;
-		 transform: translateY(-100%);
-		 animation: hamburger-divs;
-		 animation-duration: 1.5s;
-		 animation-fill-mode: forwards;
-	 }
-	 
-	 @keyframes hamburger-divs {
-		 100% {
-			 transform: translateY(0);
-		 }
-	 }
-	 
-	 #hamburger-menu > div:hover {
-		 opacity: 0.6;
-		 cursor: pointer;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(3) { /*Moje strony*/
-		flex-direction: column;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(3) > a:nth-child(3) { /*inwestor*/
-		 padding-bottom: 5rem;
-		 box-sizing: border-box;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(4) { /*Vanilla JS*/
-		flex-direction: column;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(4) > a:nth-child(6) { /*last option*/
-		 padding-bottom: 5rem;
-		 box-sizing: border-box;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(5) { /*REACT*/
-		flex-direction: column;
-	 }
-	 
-	 #hamburger-menu a {
-		display: flex;
-		margin-top: 2rem;
-		display: none;
-	 }
-	 
-	 #hamburger-menu > div:nth-child(2) > a {
-		 display: flex;
+
+	 .hamb-pages-options li, .hamb-js-options li, .hamb-react-options li {
+		 margin-bottom: 10px;
 	 }
 	 
 	 nav {
