@@ -171,9 +171,7 @@ const showReactTiles = () => {
     const tileContainerY =
       tileContainer[i].getBoundingClientRect().top +
       tileContainer[i].getBoundingClientRect().height / 2;
-    console.log(tileContainerY);
     if (tileContainerY < window.innerHeight) {
-      console.log("Mnieeeeejsza");
       reactTiles[i].classList.add("show-react-data");
       reactDescriptions[i].classList.add("show-react-data");
     }
