@@ -1,21 +1,3 @@
-const tileContainer = document.querySelectorAll(".tile-container");
-const reactTiles = document.querySelectorAll(".react-tile");
-const reactDescriptions = document.querySelectorAll(".react-desc");
-
-const showReactTiles = () => {
-  for (i = 0; i < tileContainer.length; i++) {
-    const tileContainerY =
-      tileContainer[i].getBoundingClientRect().top +
-      tileContainer[i].getBoundingClientRect().height / 2;
-    console.log(tileContainerY);
-    if (tileContainerY < window.innerHeight) {
-      console.log("Mnieeeeejsza");
-      reactTiles[i].classList.add("show-react-data");
-      reactDescriptions[i].classList.add("show-react-data");
-    }
-  }
-};
-
 const nav = document.querySelector("nav");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
@@ -44,8 +26,9 @@ const stopwatch = document.querySelector("#stopwatch");
 const stickyNotes = document.querySelector("#sticky-notes");
 
 //react tiles
-const bankApplication = document.querySelector("#bank-application");
-const countriesApplication = document.querySelector("#countries");
+const tileContainer = document.querySelectorAll(".tile-container");
+const reactTiles = document.querySelectorAll(".react-tile");
+const reactDescriptions = document.querySelectorAll(".react-desc");
 
 const tiles = document.querySelector("#tiles");
 const tilesJs = document.querySelector("#tiles-js");
@@ -164,8 +147,6 @@ const showJsTiles = () => {
   if (yToDo < window.innerHeight) {
     ToDo.classList.add("appearing-from-bottom");
     stickyNotes.classList.add("appearing-from-bottom");
-    /*bankApplication.classList.add("appearing-from-bottom");
-    countriesApplication.classList.add("appearing-from-bottom");*/
   }
 
   if (yMagicBall < window.innerHeight) {
@@ -181,6 +162,21 @@ const translateTilesDiv = () => {
   if (tilesY < window.innerHeight) {
     tiles.classList.add("translate");
     h2.classList.add("translateh2");
+  }
+};
+
+//For displaying data on React section
+const showReactTiles = () => {
+  for (i = 0; i < tileContainer.length; i++) {
+    const tileContainerY =
+      tileContainer[i].getBoundingClientRect().top +
+      tileContainer[i].getBoundingClientRect().height / 2;
+    console.log(tileContainerY);
+    if (tileContainerY < window.innerHeight) {
+      console.log("Mnieeeeejsza");
+      reactTiles[i].classList.add("show-react-data");
+      reactDescriptions[i].classList.add("show-react-data");
+    }
   }
 };
 
