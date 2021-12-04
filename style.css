@@ -332,7 +332,7 @@ main:hover::before {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("matrix.jpg");
+	background-image: url("assets/matrix.jpg");
 	background-size: cover;
 	opacity: 0;
 	animation: toptobottom;
@@ -531,7 +531,7 @@ h2 {
 	width: 100vw;
 	margin-left: -50vw;
 	left: 50%;
-	background-image: url("bg.jpg");
+	background-image: url("assets/bg.jpg");
 	background-size: cover;
 	z-index: -2;
 	opacity: 0.3;
@@ -572,7 +572,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("spacecoff.jpg");
+	background-image: url("assets/spacecoff.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -590,7 +590,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("wyczesani.jpg");
+	background-image: url("assets/wyczesani.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -608,7 +608,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("inwestor.jpg");
+	background-image: url("assets/inwestor.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -736,7 +736,7 @@ h2 {
 }
 
 .second-bg {
-	background-image: url("bg2.jpg");
+	background-image: url("assets/bg2.jpg");
 }
 
 #tiles-js a:hover + .description-tile {
@@ -806,7 +806,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("forms.jpg");
+	background-image: url("assets/forms.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -824,7 +824,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("balloons.jpg");
+	background-image: url("assets/balloons.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -842,7 +842,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("8.jpg");
+	background-image: url("assets/8.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -860,7 +860,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("time.jpg");
+	background-image: url("assets/time.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -878,7 +878,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("notes.jpg");
+	background-image: url("assets/notes.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -897,7 +897,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("currencies.jpg");
+	background-image: url("assets/currencies.jpg");
 	background-size: cover;
 	opacity: 0.4;
 }
@@ -962,7 +962,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url("bank.jpg");
+	background-image: url("assets/bank.jpg");
 	background-size: cover;
 	background-position: center;
 	opacity: 0.4;
@@ -975,7 +975,7 @@ h2 {
 }
 
 .third-bg {
-	background-image: url("react.png");
+	background-image: url("assets/reactbg.png");
 	opacity: 0.5;
 }
 
