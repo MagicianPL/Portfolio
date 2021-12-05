@@ -132,6 +132,10 @@ ol > li:hover {
 	text-shadow: 2px 2px 5px black;
 }
 
+ol > li > a {
+	text-align: center;
+}
+
 @keyframes show {
 	0% {
 		font-size: 0px;
