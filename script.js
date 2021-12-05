@@ -1,4 +1,4 @@
-const nav = document.querySelector("nav");
+const navigation = document.querySelector(".opacity-nav");
 const description = document.querySelector("#description");
 const allPInDesc = document.querySelectorAll("#description p");
 const allDivs = document.querySelectorAll("div");
@@ -40,6 +40,7 @@ const footer = document.querySelector("footer");
 const hamburgerIcon = document.querySelector("#icon-hamb");
 const hamburgerMenu = document.querySelector(".nav-overlay");
 const closingIcon = document.querySelector("#closing");
+const aboutMe = document.querySelector(".about-me");
 const myPages = document.querySelector(".hamb-my-pages");
 const myPagesOptions = document.querySelector(".hamb-pages-options");
 const vanillaJs = document.querySelector(".hamb-vanilla-js");
@@ -56,6 +57,10 @@ hamburgerIcon.addEventListener("click", () => {
 });
 
 closingIcon.addEventListener("click", () => {
+  hamburgerMenu.style.display = "none";
+});
+
+aboutMe.addEventListener("click", () => {
   hamburgerMenu.style.display = "none";
 });
 
@@ -88,12 +93,12 @@ reactHamb.addEventListener("click", () => {
 /*This function will add opacity to nav when site is scrolled for height of nav.
 Function will be triggered in main function, where I have every functions thas requires trigger by scrolling*/
 const navOpacity = () => {
-  const navHeightInPx = nav.clientHeight;
+  const navHeightInPx = navigation.clientHeight;
   const yNav = body.getBoundingClientRect().top + navHeightInPx; //so it's height of nav in fact
   if (yNav < 0) {
-    nav.classList.add("opacity");
+    navigation.classList.add("opacity");
   } else {
-    nav.classList.remove("opacity");
+    navigation.classList.remove("opacity");
   }
 };
 
