@@ -475,6 +475,12 @@ main:hover::before {
 	margin: 20px auto;
 }
 
+@media (max-width: 480px) {
+	.desc-two {
+		font-size: 4rem;
+	}
+}
+
 .desc-two p {
 	padding: 0 20px;
 }
