@@ -1146,7 +1146,6 @@ a, a:hover, a:visited, a:active {
 		height: 100vh;
 		overflow-y: scroll;
 		position: relative;
-		border: 1px solid red;
 	 }
 
 	 .hamb-nav ul {
@@ -1380,7 +1379,6 @@ a, a:hover, a:visited, a:active {
 	   height: 100vh;
 	   overflow-y: scroll;
 	   position: relative;
-	   border: 1px solid red;
 	}
 
 	.hamb-nav ul {
