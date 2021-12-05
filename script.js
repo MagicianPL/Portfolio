@@ -37,13 +37,27 @@ const h2 = document.querySelector("h2"); //this is h2 in tiles (sites tiles)
 const footer = document.querySelector("footer");
 
 //and all stuff about hamburger case on mobiles or tablets
-const hamburgerIcon = document.getElementById("icon-hamburger");
+const hamburgerIcon = document.querySelector("#icon-hamb");
+const hamburgerMenu = document.querySelector(".nav-overlay");
+const closingIcon = document.querySelector("#closing");
 const myPages = document.querySelector(".hamb-my-pages");
 const myPagesOptions = document.querySelector(".hamb-pages-options");
 const vanillaJs = document.querySelector(".hamb-vanilla-js");
 const vanillaJsOptions = document.querySelector(".hamb-js-options");
 const reactHamb = document.querySelector(".hamb-react");
 const reactHambOptions = document.querySelector(".hamb-react-options");
+
+hamburgerIcon.addEventListener("click", () => {
+  if (hamburgerMenu.style.display === "flex") {
+    hamburgerMenu.style.display = "none";
+  } else {
+    hamburgerMenu.style.display = "flex";
+  }
+});
+
+closingIcon.addEventListener("click", () => {
+  hamburgerMenu.style.display = "none";
+});
 
 myPages.addEventListener("click", () => {
   if (myPagesOptions.style.display === "block") {
@@ -224,3 +238,5 @@ const mainTriggerScrolling = () => {
   showReactTiles();
   showFooter();
 };
+
+window.addEventListener("scroll", mainTriggerScrolling);

@@ -1106,23 +1106,44 @@ a, a:hover, a:visited, a:active {
 		 position: fixed;
 		 width: 100%;
 		 height: 100vh;
+		 top: 0;
+		 bottom: 0;
+		 overflow-y: scroll;
 		 background: #4d0045;
 		 z-index: 9999;
 		 opacity: 0.95;
+		 padding-bottom: 50px;
+		 display: none;
 	 }
+
+	 #closing {
+		font-size: 5rem;
+		width: 6rem;
+		height: 6rem;
+		text-align: center;
+		line-height: 6rem;
+		color: white;
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+		border-radius: 50%;
+		background-color: #2d0428;
+	}
+	
+	#closing:hover {
+		opacity: 0.7;
+	}
 
 	 .hamb-nav {
 		color: white;
 		font-size: 5rem;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		width: 100%;
 		height: 100vh;
 		overflow-y: scroll;
-		position: absolute;
-		inset: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		position: relative;
+		border: 1px solid red;
 	 }
 
 	 .hamb-nav ul {
@@ -1139,9 +1160,21 @@ a, a:hover, a:visited, a:active {
 		 display: flex;
 		 flex-direction: column;
 		 list-style: none;
+		 justify-content: flex-start;
 		 align-items: center;
 		 font-size: 6rem;
 		 gap: 10rem;
+		 height: 95%;
+		 padding: 0;
+	 }
+
+	 .hamb-nav > ul::before, .hamb-nav > ul::after {
+		content:'';
+		flex:1;
+	 }
+
+	 .ham-nav > ul > li {
+		 margin: auto auto;
 	 }
 
 	 .hamb-pages-options, .hamb-js-options, .hamb-react-options {
@@ -1151,6 +1184,13 @@ a, a:hover, a:visited, a:active {
 
 	 .hamb-pages-options li, .hamb-js-options li, .hamb-react-options li {
 		 margin-bottom: 10px;
+		 display: flex;
+		 justify-content: center;
+		 text-align: center;
+	 }
+
+	 .hamb-react-options:last-child {
+		 margin-bottom: 40px;
 	 }
 	 
 	 nav {
