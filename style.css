@@ -1078,14 +1078,14 @@ footer {
 	display: flex;
 	align-items: center;
 	z-index: 2;
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
-.appearing-footer {
+/*.appearing-footer {
 	animation: appearing-from-bottom;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-}
+}*/
 
 footer > a {
 	width: 5rem;
