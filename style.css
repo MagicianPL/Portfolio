@@ -1017,6 +1017,14 @@ h2 {
 	transform: translateX(0);
 }
 
+.restaurants::before {
+	background-image: url("assets/restaurants.jpg");
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+
 .countries::before {
 	background-image: url("assets/countries.jpg");
 }
