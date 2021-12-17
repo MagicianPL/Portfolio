@@ -941,7 +941,6 @@ h2 {
 	width: 100%;
 	position: relative;
 	padding: 10rem 0 1.5rem 0;
-	overflow-x: hidden;
 }
 
 .tile-container {
@@ -1021,8 +1020,14 @@ h2 {
 	background-image: url("assets/restaurants.jpg");
 }
 
-.mr-auto {
+.used-tech {
 	margin-right: auto;
+}
+
+@media (max-width: 1250px) {
+	.used-tech {
+		margin: 0;
+	}
 }
 
 .countries::before {
@@ -1046,7 +1051,7 @@ h2 {
 }
 
 .third-bg {
-	background-image: url("https://rationalappdev.com/wp-content/uploads/2016/12/Cover.93953ad376e749309a483c8b11b40106.jpg");
+	background-image: url("assets/bg3.jpg");
 	opacity: 0.2;
 }
 
