@@ -461,6 +461,16 @@ main:hover::before {
 	transition-delay: 1.9s;
 }
 
+.node {
+	transition-delay: 2.1s;
+	max-width: 15rem;
+}
+
+.mongo {
+	transition-delay: 2.3s;
+	max-width: 17rem;
+}
+
 .git {
 	grid-column: 1/-1;
 	transition-delay: 2.1s;
