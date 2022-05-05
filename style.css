@@ -1031,6 +1031,11 @@ h2 {
   transform: translateX(0);
 }
 
+.stonersi::before {
+  background-image: url("assets/joint.jpg");
+  background-position: center;
+}
+
 .pixels::before {
   background-image: url("assets/pixels.jpg");
   background-position: center;
