@@ -455,8 +455,13 @@ main:hover::before {
   transition-delay: 1.5s;
 }
 
-.svelte {
+.redux {
   transition-delay: 1.7s;
+}
+
+.redux img {
+  display: block;
+  transform: scale(1.6);
 }
 
 .ts {
