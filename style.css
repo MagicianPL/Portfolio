@@ -1036,6 +1036,11 @@ h2 {
   transform: translateX(0);
 }
 
+.paybud::before {
+  background-image: url("assets/paybud.jpg");
+  background-position: center;
+}
+
 .stonersi::before {
   background-image: url("assets/joint.jpg");
   background-position: center;
